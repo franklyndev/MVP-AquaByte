@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://djl780fyogkqp"]
+[gd_scene load_steps=16 format=3 uid="uid://djl780fyogkqp"]
 
 [ext_resource type="Texture2D" uid="uid://c748wsbb2doo8" path="res://Forest Tileset/BG/NonParallax.png" id="1_gjpho"]
 [ext_resource type="Texture2D" uid="uid://c2xusldtaaxcp" path="res://backs/floresta.png" id="1_kn06e"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dyjw6kt7h0doe" path="res://backs/entrada praia.png" id="5_op4cu"]
 [ext_resource type="Texture2D" uid="uid://b5qqd2m4t7fu7" path="res://Forest Tileset/Tiles/tilemap_new_softy_sand.png" id="7_8l3nt"]
 [ext_resource type="Texture2D" uid="uid://ct51js5li0jdy" path="res://Forest Tileset/Tiles/areia melhor.png" id="8_kwl8l"]
+[ext_resource type="PackedScene" uid="uid://b5r6npc0j2pgn" path="res://Scenes/pause_menu.tscn" id="10_7yo87"]
 [ext_resource type="PackedScene" uid="uid://wj1buw7nkdqs" path="res://enitdade/camera.tscn" id="10_kn06e"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uo7di"]
@@ -997,3 +998,5 @@ editor_draw_limits = true
 
 [node name="Player" parent="." instance=ExtResource("3_45d1s")]
 position = Vector2(486, 558)
+
+[node name="pause_menu" parent="." instance=ExtResource("10_7yo87")]

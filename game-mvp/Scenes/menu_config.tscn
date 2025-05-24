@@ -1,0 +1,181 @@
+[gd_scene load_steps=11 format=3 uid="uid://drn6v0t1y7pjb"]
+
+[ext_resource type="Texture2D" uid="uid://cgd3ec0ctpu4y" path="res://Assets/raw2.png" id="1_kkprl"]
+[ext_resource type="Script" uid="uid://bektora8lcawp" path="res://Script-menu/menu_config.gd" id="1_rabp0"]
+[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Font/8-BIT WONDER.TTF" id="2_f12sv"]
+[ext_resource type="Theme" uid="uid://tx4qq5mlii5w" path="res://Assets/pause_menu.tres" id="3_kkprl"]
+[ext_resource type="Texture2D" uid="uid://dumpvke22qnyr" path="res://Assets/seta - Copia (2).png" id="4_kkprl"]
+[ext_resource type="Texture2D" uid="uid://bvu1gg6qsa05r" path="res://Assets/space.png" id="5_rabp0"]
+[ext_resource type="AudioStream" uid="uid://8v2g6o7ysyqb" path="res://Sound/013_Confirm_03.wav" id="7_40i8v"]
+[ext_resource type="AudioStream" uid="uid://myk7bsuniafa" path="res://Sound/001_Hover_01.wav" id="8_rgsga"]
+
+[sub_resource type="Theme" id="Theme_cjgmv"]
+Label/colors/font_color = Color(1, 0.768627, 0.305882, 1)
+Label/colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+Label/font_sizes/font_size = 33
+Label/fonts/font = ExtResource("2_f12sv")
+
+[sub_resource type="GDScript" id="GDScript_q4o42"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Cenas/menu_inicial.tscn\")
+"
+
+[node name="menu-config" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rabp0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kkprl")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="options" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_cjgmv")
+theme_override_colors/font_shadow_color = Color(0.129412, 0.168627, 0.262745, 1)
+theme_override_constants/outline_size = 23
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Return" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme = ExtResource("3_kkprl")
+text = "RETURN
+"
+script = SubResource("GDScript_q4o42")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -231.0
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 31
+theme_override_constants/margin_top = 51
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 51
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer2"]
+visible = false
+layout_mode = 2
+color = Color(0.0392157, 0.0392157, 0.0392157, 0.247059)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 66
+
+[node name="controls" type="Label" parent="MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.768627, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+theme_override_constants/outline_size = 23
+theme_override_fonts/font = ExtResource("2_f12sv")
+theme_override_font_sizes/font_size = 32
+text = "Controls"
+
+[node name="left" type="Label" parent="MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.768627, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_f12sv")
+text = "LEFT"
+
+[node name="Seta-left" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/left"]
+position = Vector2(140, 7.00001)
+rotation = 1.5708
+scale = Vector2(0.389566, 0.478992)
+texture = ExtResource("4_kkprl")
+
+[node name="right" type="Label" parent="MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.768627, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_f12sv")
+text = "RIGHT"
+
+[node name="Seta-right" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/right"]
+position = Vector2(140, 11)
+rotation = -1.5708
+scale = Vector2(0.389566, 0.478992)
+texture = ExtResource("4_kkprl")
+
+[node name="Jump" type="Label" parent="MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.768627, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_f12sv")
+text = "JUMP"
+
+[node name="Space" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/Jump"]
+position = Vector2(192, 10)
+scale = Vector2(0.378437, 0.344595)
+texture = ExtResource("5_rabp0")
+
+[node name="attack" type="Label" parent="MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.768627, 0.305882, 1)
+theme_override_colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_f12sv")
+text = "ATTACK"
+
+[node name="Audio_confirm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_40i8v")
+
+[node name="Audio_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_rgsga")
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Return" to="." method="_on_return_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Return" to="." method="_on_return_pressed"]
