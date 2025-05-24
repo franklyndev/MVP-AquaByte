@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://djl780fyogkqp"]
+[gd_scene load_steps=17 format=3 uid="uid://djl780fyogkqp"]
 
 [ext_resource type="Texture2D" uid="uid://c748wsbb2doo8" path="res://Forest Tileset/BG/NonParallax.png" id="1_gjpho"]
 [ext_resource type="Texture2D" uid="uid://c2xusldtaaxcp" path="res://backs/floresta.png" id="1_kn06e"]
@@ -943,6 +943,9 @@ sources/1 = SubResource("TileSetAtlasSource_y7y61")
 sources/3 = SubResource("TileSetAtlasSource_xiqgv")
 sources/4 = SubResource("TileSetAtlasSource_waglr")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kn06e"]
+size = Vector2(79.25, 47)
+
 [node name="World" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -1000,3 +1003,7 @@ editor_draw_limits = true
 position = Vector2(486, 558)
 
 [node name="pause_menu" parent="." instance=ExtResource("10_7yo87")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3446.63, 548)
+shape = SubResource("RectangleShape2D_kn06e")
