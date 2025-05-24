@@ -1,26 +1,48 @@
 extends CharacterBody2D
 
-@export var speed: float = 200.0
-@export var gravity: float = 1000.0
-@export var jump_force: float = 400.0
+const SPEED = 175.0
+const JUMP_VELOCITY = -300.0
+
+@onready var anim: AnimatedSprite2D = $Protagonista
+
+var is_jumping := false
+var is_dead = false
+var is_paused: bool = false
 
 func _physics_process(delta: float) -> void:
-	var direction = 0.0
-
-	# Movimento lateral
-	if Input.is_action_pressed("ui_left"):
-		direction -= 1
-	if Input.is_action_pressed("ui_right"):
-		direction += 1
-
-	velocity.x = direction * speed
-
-	# Aplicando gravidade
+	if is_dead:
+		return
+	
+	#pausar jogador
+	if is_paused:
+		velocity = Vector2.ZERO
+		anim.play("idle")
+		return
+		
+	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY	
+		is_jumping = true
+	elif  is_on_floor():
+		is_jumping = false
+					
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("Left", "Right")
+	if direction:
+		velocity.x = direction * SPEED
+		anim.scale = Vector2(sign(direction), 1)
+		if !is_jumping:
+			anim.play("Running)
+	elif  is_jumping:
+		anim.play("Jumping")
 	else:
-		# Pulo só se estiver no chão
-		if Input.is_action_just_pressed("ui_up"):
-			velocity.y = -jump_force
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		anim.play("Idle")
 
 	move_and_slide()
