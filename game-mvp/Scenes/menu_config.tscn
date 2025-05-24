@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://drn6v0t1y7pjb"]
 
-[ext_resource type="Texture2D" uid="uid://cgd3ec0ctpu4y" path="res://Assets/raw2.png" id="1_kkprl"]
-[ext_resource type="Script" uid="uid://bektora8lcawp" path="res://Script-menu/menu_config.gd" id="1_rabp0"]
-[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Font/8-BIT WONDER.TTF" id="2_f12sv"]
-[ext_resource type="Theme" uid="uid://tx4qq5mlii5w" path="res://Assets/pause_menu.tres" id="3_kkprl"]
-[ext_resource type="Texture2D" uid="uid://dumpvke22qnyr" path="res://Assets/seta - Copia (2).png" id="4_kkprl"]
-[ext_resource type="Texture2D" uid="uid://bvu1gg6qsa05r" path="res://Assets/space.png" id="5_rabp0"]
+[ext_resource type="Texture2D" uid="uid://cgd3ec0ctpu4y" path="res://Menu-assets/raw2.png" id="1_kkprl"]
+[ext_resource type="Script" uid="uid://bektora8lcawp" path="res://Scripts/menu/menu_config.gd" id="1_rabp0"]
+[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="2_f12sv"]
+[ext_resource type="Theme" uid="uid://tx4qq5mlii5w" path="res://Menu-assets/pause_menu.tres" id="3_kkprl"]
+[ext_resource type="Texture2D" uid="uid://dumpvke22qnyr" path="res://Menu-assets/seta - Copia (2).png" id="4_kkprl"]
+[ext_resource type="Texture2D" uid="uid://bvu1gg6qsa05r" path="res://Menu-assets/space.png" id="5_rabp0"]
 [ext_resource type="AudioStream" uid="uid://8v2g6o7ysyqb" path="res://Sound/013_Confirm_03.wav" id="7_40i8v"]
 [ext_resource type="AudioStream" uid="uid://myk7bsuniafa" path="res://Sound/001_Hover_01.wav" id="8_rgsga"]
 

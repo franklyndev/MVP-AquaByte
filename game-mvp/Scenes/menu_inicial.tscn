@@ -129,9 +129,9 @@ texture = ExtResource("2_21lpp")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 271.0
+offset_left = 297.0
 offset_top = 77.0
-offset_right = -337.0
+offset_right = -311.0
 offset_bottom = 584.0
 grow_horizontal = 2
 
