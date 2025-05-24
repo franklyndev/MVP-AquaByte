@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 		anim.scale = Vector2(sign(direction), 1)
 		if !is_jumping:
-			anim.play("Running)
+			anim.play("Running")
 	elif  is_jumping:
 		anim.play("Jumping")
 	else:

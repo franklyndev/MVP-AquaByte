@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Ataque") and not is_attacking:
 		is_attacking = true
 		anim.play("Attack")
+		velocity.x = 0
 		
 	# Se estiver atacando, não mudar animação
 	if is_attacking:
