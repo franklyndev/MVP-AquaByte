@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0n1u0vgtjog0"
-path="res://.godot/imported/tileset terreno.png-02993e4f94c99103be06f01a477cbeb5.ctex"
+uid="uid://diteqc1o3stmn"
+path="res://.godot/imported/entrada-caverna.png-7f744794d507c9b80e746c4a6d5f6ce5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Forest Tileset/Tiles/tileset terreno.png"
-dest_files=["res://.godot/imported/tileset terreno.png-02993e4f94c99103be06f01a477cbeb5.ctex"]
+source_file="res://backs/entrada-caverna.png"
+dest_files=["res://.godot/imported/entrada-caverna.png-7f744794d507c9b80e746c4a6d5f6ce5.ctex"]
 
 [params]
 
