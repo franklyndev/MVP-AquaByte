@@ -1,0 +1,218 @@
+[gd_scene load_steps=28 format=3 uid="uid://cachn2ts0qnjc"]
+
+[ext_resource type="Script" uid="uid://bjrjjjcy4bny1" path="res://Scripts/menu/menu_inicial.gd" id="1_21lpp"]
+[ext_resource type="Texture2D" uid="uid://cgd3ec0ctpu4y" path="res://Menu-assets/raw2.png" id="2_21lpp"]
+[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="3_21lpp"]
+[ext_resource type="Theme" uid="uid://tx4qq5mlii5w" path="res://Menu-assets/pause_menu.tres" id="4_v5lwh"]
+[ext_resource type="AudioStream" uid="uid://8v2g6o7ysyqb" path="res://Sound/013_Confirm_03.wav" id="5_o78ah"]
+[ext_resource type="AudioStream" uid="uid://myk7bsuniafa" path="res://Sound/001_Hover_01.wav" id="6_06ruf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdvqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_21lpp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v5lwh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o78ah"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06ruf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fhxf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hmei6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o0k3s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g517m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mts4"]
+
+[sub_resource type="Theme" id="Theme_ktf6r"]
+Button/colors/font_color = Color(1, 0.768627, 0.305882, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 19
+Button/font_sizes/font_size = 48
+Button/fonts/font = ExtResource("3_21lpp")
+Button/styles/disabled = SubResource("StyleBoxEmpty_qdvqo")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_21lpp")
+Button/styles/focus = SubResource("StyleBoxEmpty_v5lwh")
+Button/styles/hover = SubResource("StyleBoxEmpty_o78ah")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_06ruf")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_3fhxf")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_hmei6")
+Button/styles/normal = SubResource("StyleBoxEmpty_o0k3s")
+Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_g517m")
+Button/styles/pressed = SubResource("StyleBoxEmpty_8mts4")
+Button/styles/pressed_mirrored = null
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ylkv1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hx22f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1qhop"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j62ax"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bd5um"]
+
+[sub_resource type="Theme" id="Theme_55v0k"]
+Button/colors/font_color = Color(1, 0.768627, 0.305882, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 18
+Button/font_sizes/font_size = 22
+Button/fonts/font = ExtResource("3_21lpp")
+Button/styles/disabled = SubResource("StyleBoxEmpty_ylkv1")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_hx22f")
+Button/styles/focus = SubResource("StyleBoxEmpty_1qhop")
+Button/styles/hover = SubResource("StyleBoxEmpty_j62ax")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_bd5um")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ejgk7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sfwk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vr2db"]
+
+[sub_resource type="Theme" id="Theme_3exob"]
+Button/colors/font_color = Color(1, 0.768627, 0.305882, 1)
+Button/colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 18
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("3_21lpp")
+Button/styles/disabled = SubResource("StyleBoxEmpty_ejgk7")
+Button/styles/disabled_mirrored = SubResource("StyleBoxEmpty_6sfwk")
+Button/styles/focus = SubResource("StyleBoxEmpty_vr2db")
+Button/styles/hover = null
+
+[node name="Menu_Inicial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_21lpp")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -12.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_21lpp")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 297.0
+offset_top = 77.0
+offset_right = -311.0
+offset_bottom = 584.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+expand_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -84.5
+offset_right = 125.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 24
+
+[node name="Start" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_ktf6r")
+text = "Start
+"
+flat = true
+
+[node name="Options" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_v5lwh")
+text = "Options
+"
+
+[node name="Credit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_55v0k")
+text = "CREDITS
+"
+flat = true
+
+[node name="Quit-game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_3exob")
+text = "QUIT GAME"
+flat = true
+
+[node name="Audio_confirm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_o78ah")
+
+[node name="Audio_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_06ruf")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_inicar_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/Options" to="." method="_on_options_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/Credit" to="." method="_on_credit_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Credit" to="." method="_on_creditos_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/Quit-game" to="." method="_on_quitgame_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit-game" to="." method="_on_sair_do_jogo_pressed"]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5r6npc0j2pgn"]
+
+[ext_resource type="Script" uid="uid://cnfj1vyowwaop" path="res://Scripts/menu/pause_menu.gd" id="1_ddlpt"]
+[ext_resource type="Theme" uid="uid://tx4qq5mlii5w" path="res://Menu-assets/pause_menu.tres" id="2_dokru"]
+[ext_resource type="AudioStream" uid="uid://c1rq0u2xs610e" path="res://Sound/092_Pause_04.wav" id="3_adfkx"]
+[ext_resource type="AudioStream" uid="uid://0oous5rjg3es" path="res://Sound/098_Unpause_04.wav" id="4_8514u"]
+[ext_resource type="AudioStream" uid="uid://8v2g6o7ysyqb" path="res://Sound/013_Confirm_03.wav" id="5_8514u"]
+[ext_resource type="AudioStream" uid="uid://myk7bsuniafa" path="res://Sound/001_Hover_01.wav" id="6_wdnpe"]
+
+[node name="pause_menu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_ddlpt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.0980392)
+
+[node name="menu_holder" type="VBoxContainer" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -33.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continuar_Jogo" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("2_dokru")
+text = "resume game"
+
+[node name="tela_principal" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("2_dokru")
+text = "Main Menu"
+
+[node name="Sair_do_jogo" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("2_dokru")
+text = "quit game"
+
+[node name="Audio_pause" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_adfkx")
+mix_target = 1
+
+[node name="Audio_unpause" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8514u")
+mix_target = 1
+
+[node name="Audio_confirm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8514u")
+mix_target = 1
+
+[node name="Audio_hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_wdnpe")
+
+[connection signal="mouse_entered" from="menu_holder/Continuar_Jogo" to="." method="_on_continuar_jogo_mouse_entered"]
+[connection signal="pressed" from="menu_holder/Continuar_Jogo" to="." method="_on_continuar_jogo_pressed"]
+[connection signal="mouse_entered" from="menu_holder/tela_principal" to="." method="_on_config_menu_mouse_entered"]
+[connection signal="pressed" from="menu_holder/tela_principal" to="." method="_on_config_menu_pressed"]
+[connection signal="mouse_entered" from="menu_holder/Sair_do_jogo" to="." method="_on_sair_do_jogo_mouse_entered"]
+[connection signal="pressed" from="menu_holder/Sair_do_jogo" to="." method="_on_sair_do_jogo_pressed"]
