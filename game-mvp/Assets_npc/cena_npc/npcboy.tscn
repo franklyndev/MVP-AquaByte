@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4yyir4j73s3n"]
+
+[ext_resource type="Script" uid="uid://t4fp26hbcuct" path="res://Assets_npc/cena_npc/npcboy.gd" id="1_1islw"]
+[ext_resource type="Texture2D" uid="uid://0e33yl8ujv6d" path="res://Assets_npc/Boy_idle.png" id="1_x6p88"]
+[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="2_bnvqj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2b1q"]
+size = Vector2(15.5, 25.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2b1q"]
+atlas = ExtResource("1_x6p88")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnvqj"]
+atlas = ExtResource("1_x6p88")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1islw"]
+atlas = ExtResource("1_x6p88")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoxg4"]
+atlas = ExtResource("1_x6p88")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jw1lg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2b1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnvqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1islw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoxg4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1islw"]
+font = ExtResource("2_bnvqj")
+font_size = 12
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="npcboy" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_1islw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.75, -13.75)
+shape = SubResource("RectangleShape2D_s2b1q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(12, -25)
+sprite_frames = SubResource("SpriteFrames_jw1lg")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -6.0
+offset_top = -31.5
+offset_right = 54.0
+offset_bottom = -19.5
+scale = Vector2(0.196991, 0.224956)
+text = "teste"
+label_settings = SubResource("LabelSettings_1islw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

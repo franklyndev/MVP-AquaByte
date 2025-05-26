@@ -1,0 +1,91 @@
+[gd_scene load_steps=20 format=3 uid="uid://j3wcxfmrbusy"]
+
+[ext_resource type="Texture2D" uid="uid://dhkiaxgg7krdp" path="res://Assets definitivos/Cuspidor/cuspidor 0.png" id="1_mjp5o"]
+[ext_resource type="Texture2D" uid="uid://hokr7lhufdbr" path="res://Assets definitivos/Cuspidor/cuspidor 1.png" id="2_hyxft"]
+[ext_resource type="Texture2D" uid="uid://cydwlohdcg0dh" path="res://Assets definitivos/Cuspidor/cuspidor 2.png" id="3_db8xc"]
+[ext_resource type="Texture2D" uid="uid://b5igplwij76fx" path="res://Assets definitivos/Cuspidor/cuspidor 3.png" id="4_wkwg8"]
+[ext_resource type="Texture2D" uid="uid://k630bevkifvn" path="res://Assets definitivos/Cuspidor/cuspidor 4.png" id="5_m132a"]
+[ext_resource type="Texture2D" uid="uid://dc5lslo2ipmpo" path="res://Assets definitivos/Cuspidor/cuspidor 5.png" id="6_ogdid"]
+[ext_resource type="Texture2D" uid="uid://prubq76n32fm" path="res://Assets definitivos/Cuspidor/cuspidor 6.png" id="7_1csaq"]
+[ext_resource type="Texture2D" uid="uid://bqnwb2edv5tqm" path="res://Assets definitivos/Cuspidor/cuspidor 7.png" id="8_rxmd8"]
+[ext_resource type="Texture2D" uid="uid://c80o6yi8mmffl" path="res://Assets definitivos/Cuspidor/cuspidor 8.png" id="9_de0ps"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wxk0"]
+atlas = ExtResource("1_mjp5o")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8n4k"]
+atlas = ExtResource("2_hyxft")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0hpp"]
+atlas = ExtResource("3_db8xc")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uj1s"]
+atlas = ExtResource("4_wkwg8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5b6m"]
+atlas = ExtResource("5_m132a")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at3h4"]
+atlas = ExtResource("6_ogdid")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vmw3"]
+atlas = ExtResource("7_1csaq")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ki8t"]
+atlas = ExtResource("8_rxmd8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx8uk"]
+atlas = ExtResource("9_de0ps")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7hc3e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wxk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8n4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0hpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uj1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5b6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at3h4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vmw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ki8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bx8uk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cuspidor" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -38)
+sprite_frames = SubResource("SpriteFrames_7hc3e")
+autoplay = "default"
+frame_progress = 0.718398
