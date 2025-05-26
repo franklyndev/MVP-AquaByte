@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dhkyl8315nekp" path="res://backs/Caverna.png" id="1_cou8j"]
 [ext_resource type="Texture2D" uid="uid://bsng7h6pjje3s" path="res://Forest Tileset/Tiles/cave tile 2.png" id="2_1f55b"]
-[ext_resource type="Texture2D" uid="uid://bena5enlmpah1" path="res://backs/cave-lixada.png" id="2_qyhf2"]
+[ext_resource type="Texture2D" uid="uid://bena5enlmpah1" path="res://backs/cavecomlixo.png" id="2_qyhf2"]
 [ext_resource type="Texture2D" uid="uid://j3aubvft8dmx" path="res://Assets definitivos/liveixa vermelha.png" id="4_48k20"]
 [ext_resource type="Texture2D" uid="uid://6ltd53py07ka" path="res://Assets definitivos/lixeira amarela.png" id="6_f5ab5"]
 [ext_resource type="Texture2D" uid="uid://dvl18r1ij7x3p" path="res://Assets definitivos/Lixeira azul.png" id="7_vsia7"]
