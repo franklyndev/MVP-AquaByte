@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctef347lae16u"]
+
+[ext_resource type="Texture2D" uid="uid://co7p34qp35ulh" path="res://boss (2)/assets/projetil/SFX302_03.png" id="1_m5xho"]
+[ext_resource type="Texture2D" uid="uid://cna0ui0l3rsuw" path="res://boss (2)/assets/projetil/SFX302_04.png" id="2_kmxf7"]
+[ext_resource type="Texture2D" uid="uid://nutgljtqdq8y" path="res://boss (2)/assets/projetil/SFX302_05.png" id="3_l04k4"]
+[ext_resource type="Script" uid="uid://xjawr4ucst0j" path="res://boss (2)/script/explosion.gd" id="4_cf70p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xjsk"]
+atlas = ExtResource("1_m5xho")
+region = Rect2(0, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjpps"]
+atlas = ExtResource("2_kmxf7")
+region = Rect2(0, 0, 35, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ew515"]
+atlas = ExtResource("3_l04k4")
+region = Rect2(0, 0, 35, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6cxdk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xjsk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjpps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ew515")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="explosion" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6cxdk")
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
+script = ExtResource("4_cf70p")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
