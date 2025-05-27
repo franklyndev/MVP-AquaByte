@@ -30,13 +30,13 @@
 [ext_resource type="Texture2D" uid="uid://b33oikh7riyjb" path="res://Assets feitos por Franklyn/Saco de lixo fechado pequeno.png" id="25_33kev"]
 [ext_resource type="Texture2D" uid="uid://dlebukiut3ib4" path="res://Assets feitos por Franklyn/lata de refri.png" id="26_g01fq"]
 [ext_resource type="Texture2D" uid="uid://ch4n6n518mytg" path="res://Assets feitos por Franklyn/saco de lixo aberto 2.png" id="27_33kev"]
-[ext_resource type="PackedScene" uid="uid://dlkvb8ou28vp3" path="res://Scenes/enemy.tscn" id="28_g01fq"]
+[ext_resource type="PackedScene" path="res://Scenes/enemy.tscn" id="28_g01fq"]
 [ext_resource type="PackedScene" uid="uid://b5r6npc0j2pgn" path="res://Scenes/pause_menu.tscn" id="30_7dsfl"]
 [ext_resource type="PackedScene" uid="uid://bht8yit5qrt4f" path="res://zona-dano/killzone.tscn" id="30_y1bqn"]
 [ext_resource type="PackedScene" uid="uid://0m473gbdf5re" path="res://Assets_npc/cena_npc/npcanciao.tscn" id="31_7dsfl"]
 [ext_resource type="PackedScene" uid="uid://c4yyir4j73s3n" path="res://Assets_npc/cena_npc/npcboy.tscn" id="31_371b6"]
 [ext_resource type="PackedScene" uid="uid://d37h7gsesra28" path="res://Assets_npc/cena_npc/npc_mae.tscn" id="31_mq4nq"]
-[ext_resource type="PackedScene" uid="uid://j3wcxfmrbusy" path="res://Assets definitivos/cuspidor.tscn" id="37_n1aqv"]
+[ext_resource type="PackedScene" path="res://Assets definitivos/cuspidor.tscn" id="37_n1aqv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y7y61"]
 texture = ExtResource("4_45d1s")
