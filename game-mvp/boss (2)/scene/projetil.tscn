@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://g2tm20527mw"]
+
+[ext_resource type="Texture2D" uid="uid://b8e0gbvc2a75y" path="res://boss (2)/assets/projetil/SFX302_01.png" id="1_4dvx7"]
+[ext_resource type="Script" uid="uid://df84h0tbddmyq" path="res://boss (2)/script/projetil.gd" id="1_e138m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e138m"]
+radius = 4.9794
+height = 18.8676
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d76vc"]
+radius = 6.23947
+height = 25.0577
+
+[node name="projetil" type="AnimatableBody2D"]
+collision_layer = 8
+collision_mask = 3
+sync_to_physics = false
+script = ExtResource("1_e138m")
+
+[node name="proj_colision" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 3)
+rotation = -1.0181
+shape = SubResource("CapsuleShape2D_e138m")
+
+[node name="sprite" type="Sprite2D" parent="."]
+modulate = Color(0.05, 33.459, 0.041, 1)
+texture_filter = 1
+texture = ExtResource("1_4dvx7")
+
+[node name="detector" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 3
+
+[node name="colision" type="CollisionShape2D" parent="detector"]
+position = Vector2(-3, 3)
+rotation = -1.08483
+shape = SubResource("CapsuleShape2D_d76vc")
+
+[connection signal="body_entered" from="detector" to="." method="_on_detector_body_entered"]
