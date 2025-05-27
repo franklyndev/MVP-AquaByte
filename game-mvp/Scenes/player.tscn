@@ -1,10 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcc3eb2ps3a48"]
+[gd_scene load_steps=17 format=3 uid="uid://bcc3eb2ps3a48"]
 
 [ext_resource type="Script" uid="uid://bo72kcxuxcnec" path="res://Scripts/playermoving/Novo.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://cpmnf2ulim2cq" path="res://Sprite's/Protagonista pixelliart.png" id="1_v0iea"]
+[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="3_6t5aa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(46, 15.5)
+size = Vector2(46, 41.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
+size = Vector2(20, 32.75)
 
 [sub_resource type="Animation" id="Animation_6t5aa"]
 resource_name = "Attack"
@@ -329,10 +333,21 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0iea"]
-size = Vector2(29, 59.375)
+size = Vector2(36.5, 64.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6t5aa"]
+bg_color = Color(0.638884, 1.29953e-06, 2.40654e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vgqql"]
+bg_color = Color(0.0862745, 0.654902, 0.101961, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vgqql"]
+font = ExtResource("3_6t5aa")
+font_size = 12
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(2, 2)
+collision_layer = 3
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -345,11 +360,21 @@ vframes = 7
 [node name="hitbox" type="Area2D" parent="Sprite2D"]
 position = Vector2(-2.75, 27)
 scale = Vector2(0.5, 0.5)
+collision_layer = 32
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/hitbox"]
-position = Vector2(35, -33.75)
+position = Vector2(35, -20.75)
 shape = SubResource("RectangleShape2D_cvnsp")
 disabled = true
+
+[node name="hurtbox" type="Area2D" parent="Sprite2D"]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/hurtbox"]
+position = Vector2(0, 11.375)
+shape = SubResource("RectangleShape2D_6t5aa")
+debug_color = Color(0.962775, 0, 0.502614, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -358,8 +383,31 @@ libraries = {
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(1, -29.1875)
+position = Vector2(3.75, -30.75)
 shape = SubResource("RectangleShape2D_v0iea")
 
+[node name="vida_bar" type="ProgressBar" parent="."]
+offset_left = -14.5
+offset_top = -78.0
+offset_right = 23.5
+offset_bottom = -66.0
+theme_override_styles/background = SubResource("StyleBoxFlat_6t5aa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vgqql")
+max_value = 3.0
+value = 3.0
+show_percentage = false
+
+[node name="vida_label" type="Label" parent="vida_bar"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 52.0
+offset_bottom = 18.0
+scale = Vector2(0.736885, 0.68)
+text = "3/3"
+label_settings = SubResource("LabelSettings_vgqql")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Sprite2D/hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_entered" from="Sprite2D/hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

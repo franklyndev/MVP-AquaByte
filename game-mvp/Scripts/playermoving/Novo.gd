@@ -2,19 +2,33 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
+const vida_max = 3
+const dano = 1
+
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var vida_label: Label = $vida_bar/vida_label
+@onready var vida_bar: ProgressBar = $ProgressBar
 
 
+
+var vida: int = vida_max
 var is_attacking: bool = false
 var is_jumping := false
 var is_dead = false
 var is_paused: bool = false
+var invulneravel: bool = false
+
+func _ready() -> void:
+	if vida_bar:
+		vida_bar.min_value = 0
+		vida_bar.max_value = vida_max
+	atualizar_barra_vida()
+	
 
 
 func _physics_process(delta: float) -> void:
-	
 	
 	if is_dead:
 		return
@@ -68,8 +82,41 @@ func _physics_process(delta: float) -> void:
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Attack":
 		is_attacking = false
+	elif anim_name == "hurt":  # ou "hurt", dependendo da animação
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 		
-
+func _on_spike_body_entered(body: Node2D) -> void:
+	if body == self and not is_dead:
+		die()
+		
+func atualizar_barra_vida():
+	if vida_bar:
+		vida_bar.value = vida
+	if vida_label:
+		vida_label.text = "%d/%d" % [vida, vida_max]
+		
+func take_damage(amount:int):
+	if is_dead or invulneravel:
+		return
+	vida -= amount
+	atualizar_barra_vida()
+	if vida <= 0:
+		die()
+		
+func die():
+	vida = 0
+	is_dead = true
+	atualizar_barra_vida()
+	velocity = Vector2.ZERO
+	anim.play("hurt")
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
-	pass
+	if body.is_in_group("enemy") and is_attacking:
+		if body.has_method("take_damage"):
+			body.take_damage(dano)
+
+
+func _on_hurtbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemy"):
+		take_damage(dano)
+		
