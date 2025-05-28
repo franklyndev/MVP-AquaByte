@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://coph87owebcnw"
+path="res://.godot/imported/tela-de-créditos wav.wav-a32865294cd69aaa95f866cdfd564f95.sample"
+
+[deps]
+
+source_file="res://Scenes/tela-de-créditos wav.wav"
+dest_files=["res://.godot/imported/tela-de-créditos wav.wav-a32865294cd69aaa95f866cdfd564f95.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

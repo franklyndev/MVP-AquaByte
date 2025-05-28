@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cachn2ts0qnjc"]
+[gd_scene load_steps=29 format=3 uid="uid://cachn2ts0qnjc"]
 
 [ext_resource type="Script" uid="uid://bjrjjjcy4bny1" path="res://Scripts/menu/menu_inicial.gd" id="1_21lpp"]
 [ext_resource type="Texture2D" uid="uid://cgd3ec0ctpu4y" path="res://Menu-assets/raw2.png" id="2_21lpp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://tx4qq5mlii5w" path="res://Menu-assets/pause_menu.tres" id="4_v5lwh"]
 [ext_resource type="AudioStream" uid="uid://8v2g6o7ysyqb" path="res://Sound/013_Confirm_03.wav" id="5_o78ah"]
 [ext_resource type="AudioStream" uid="uid://myk7bsuniafa" path="res://Sound/001_Hover_01.wav" id="6_06ruf"]
+[ext_resource type="AudioStream" uid="uid://bsu00l758fa7j" path="res://Sound/inicio.mp3" id="7_3xty2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdvqo"]
 
@@ -207,6 +208,11 @@ stream = ExtResource("5_o78ah")
 stream = ExtResource("6_06ruf")
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3xty2")
+volume_db = -22.487
+autoplay = true
 
 [connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_inicar_pressed"]

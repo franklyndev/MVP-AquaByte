@@ -20,7 +20,7 @@ var bomb_cont := 0
 var can_launch_bomb = true
 var can_launch_projetil := true
 var player_hit := false
-var boss_hp := 1
+var boss_hp := 7
 var is_dead: bool = false
 #@export var boss_instance : PackedScene
 
@@ -135,6 +135,8 @@ func die() -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
 	anime.play("death")
+	await anime.animation_finished
+	get_tree().change_scene_to_file("res://Scenes/telafimjogo.tscn")
 		
 		
 		

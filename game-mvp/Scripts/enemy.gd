@@ -47,9 +47,9 @@ func take_damage(amount: int) -> void:
 func die() -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
-	anim.play("hurt2") 
+	anim.play("death") 
 	
 func _on_anim_enemy_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "hurt2":
+	if anim_name == "death":
 		queue_free()
 		

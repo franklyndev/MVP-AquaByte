@@ -63,7 +63,7 @@ func player_attack():
 		await get_tree().create_timer(1.0).timeout
 		$eneym/LabelEnemy.text = "VOCÊ GANHOU!"
 		await get_tree().create_timer(2).timeout
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Scenes/caverna.tscn")
 		return
 	
 	player_turn = false
@@ -104,7 +104,7 @@ func enemy_action():
 		await get_tree().create_timer(1.0).timeout
 		$Player/LabelPlayer.text = "VOCÊ PERDEU"
 		await get_tree().create_timer(2).timeout
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
 	# Se o jogador não morreu, volta a vez para o jogador
 	player_turn = true

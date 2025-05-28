@@ -1,9 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://bcc3eb2ps3a48"]
+[gd_scene load_steps=19 format=3 uid="uid://bcc3eb2ps3a48"]
 
 [ext_resource type="Script" uid="uid://bo72kcxuxcnec" path="res://Scripts/playermoving/Novo.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://cpmnf2ulim2cq" path="res://Sprite's/Protagonista pixelliart.png" id="1_v0iea"]
 [ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="3_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://bo3ggqocjw548" path="res://Assets definitivos/hearts.png" id="4_vgqql"]
+[ext_resource type="AudioStream" uid="uid://chke3fednmvms" path="res://Sound/som-de-faca-4 wav.wav" id="5_fkybt"]
+[ext_resource type="AudioStream" uid="uid://cfljb5ocpekws" path="res://Sound/damage pp.wav" id="6_x3wgy"]
+[ext_resource type="AudioStream" uid="uid://cgk3uo47qhigu" path="res://Sound/Morte.mp3" id="7_3smsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(46, 41.5)
@@ -397,6 +400,22 @@ position = Vector2(2.03559, 15.4412)
 scale = Vector2(1.0178, 1.01103)
 texture = ExtResource("4_vgqql")
 vframes = 4
+
+[node name="Faca" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fkybt")
+volume_db = -25.298
+mix_target = 1
+
+[node name="Hurtsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_x3wgy")
+volume_db = -25.298
+mix_target = 1
+playback_type = 1
+
+[node name="deathsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3smsa")
+volume_db = -25.298
+mix_target = 1
 
 [connection signal="body_entered" from="Sprite2D/hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_entered" from="Sprite2D/hurtbox" to="." method="_on_hurtbox_body_entered"]

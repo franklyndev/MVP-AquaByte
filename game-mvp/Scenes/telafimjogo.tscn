@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc16t8wuab1w"]
+[gd_scene load_steps=5 format=3 uid="uid://cc16t8wuab1w"]
 
 [ext_resource type="Script" uid="uid://cce51ebis1c2v" path="res://Scripts/telafimdejogo.gd" id="1_m4yqr"]
+[ext_resource type="AudioStream" uid="uid://dkfryvptb6su2" path="res://Sound/tela-de-créditos wav.wav" id="2_cg0s7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eye78"]
 bg_color = Color(0.0338533, 0.0338533, 0.0338532, 1)
@@ -79,3 +80,8 @@ fit_content = true
 scroll_following = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cg0s7")
+volume_db = -12.18
+autoplay = true
