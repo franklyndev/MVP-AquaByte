@@ -4,11 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://drkbd1bhsxwu6" path="res://boss (2)/assets/Saco de lixo fechado.png" id="2_l73kq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o6rmq"]
-radius = 8.544
+radius = 38.0
 
 [node name="bomb" type="RigidBody2D"]
 texture_filter = 1
-scale = Vector2(23.7538, 21.4396)
 collision_layer = 8
 collision_mask = 3
 contact_monitor = true
@@ -16,11 +15,12 @@ max_contacts_reported = 1
 script = ExtResource("1_l73kq")
 
 [node name="colision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(-3, 23)
 shape = SubResource("CircleShape2D_o6rmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -6)
+scale = Vector2(3.33637, 3.65022)
 texture = ExtResource("2_l73kq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
