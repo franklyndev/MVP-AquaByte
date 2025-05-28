@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://duwii1vfgo4yf"
+path="res://.godot/imported/Heal_02.wav-eb16b89c5e4111c352589bf689c812b3.sample"
+
+[deps]
+
+source_file="res://Sound batalha turno/Heal_02.wav"
+dest_files=["res://.godot/imported/Heal_02.wav-eb16b89c5e4111c352589bf689c812b3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

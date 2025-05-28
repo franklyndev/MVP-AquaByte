@@ -1,0 +1,263 @@
+[gd_scene load_steps=16 format=3 uid="uid://bcfpqdg6nhpeo"]
+
+[ext_resource type="Script" uid="uid://xw45jyrumapd" path="res://Scripts batalha turno/combat_sccene.gd" id="1_wrub7"]
+[ext_resource type="Texture2D" uid="uid://bena5enlmpah1" path="res://backs/cavecomlixo.png" id="2_ly4v5"]
+[ext_resource type="PackedScene" uid="uid://cymru2m3uv56y" path="res://Cenas batalha turno/eneym.tscn" id="3_b3jyw"]
+[ext_resource type="PackedScene" uid="uid://bwwdsxg1ps5e1" path="res://Cenas batalha turno/player.tscn" id="4_kyqxr"]
+[ext_resource type="AudioStream" uid="uid://3glo682dj8vq" path="res://Sound batalha turno/enemyimpact.wav" id="5_vcldm"]
+[ext_resource type="PackedScene" uid="uid://dpjp8xge861hy" path="res://Cenas batalha turno/menu.tscn" id="5_x4c5b"]
+[ext_resource type="Texture2D" uid="uid://r6hi5uo8gk71" path="res://Assets batalha turno/menuMSN.png" id="6_b3jyw"]
+[ext_resource type="AudioStream" uid="uid://bys4mm0evi5s1" path="res://Sound batalha turno/Punch 1.wav" id="6_ly0tx"]
+[ext_resource type="AudioStream" uid="uid://b0oidwvcmty0" path="res://Sound batalha turno/batalha pokemon 3.mp3" id="7_kyqxr"]
+[ext_resource type="AudioStream" uid="uid://duwii1vfgo4yf" path="res://Sound batalha turno/Heal_02.wav" id="8_m4125"]
+[ext_resource type="FontFile" uid="uid://xsltbg2c3cht" path="res://Font batalha turno/Seagram tfb.ttf" id="10_fgo47"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcp5e"]
+bg_color = Color(1, 0.027451, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7qxw"]
+bg_color = Color(0, 0.709804, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb5fa"]
+bg_color = Color(0.890196, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lh6qd"]
+bg_color = Color(0, 0.709804, 0, 1)
+
+[node name="CombatSccene" type="Node2D"]
+script = ExtResource("1_wrub7")
+
+[node name="TextureRect" type="Sprite2D" parent="."]
+position = Vector2(575.114, 322.739)
+scale = Vector2(0.560435, 0.559482)
+texture = ExtResource("2_ly4v5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu" parent="TextureRect" instance=ExtResource("5_x4c5b")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Menu"]
+anchors_preset = -1
+anchor_left = -0.00260416
+anchor_top = -0.0339506
+anchor_bottom = 0.0787037
+offset_left = 55.0
+offset_top = 477.0
+offset_right = 195.0
+offset_bottom = 578.0
+scale = Vector2(0.66963, 0.453881)
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="TextureRect/Menu"]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = -0.0121528
+anchor_top = -0.00617284
+anchor_right = 0.0651042
+anchor_bottom = 0.0262346
+offset_left = 69.0
+offset_top = 460.0
+offset_right = 229.0
+offset_bottom = 491.0
+scale = Vector2(0.362624, 0.423088)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+text = "
+"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="TextureRect/Menu"]
+modulate = Color(0.0121183, 0.0121183, 0.0121183, 1)
+anchors_preset = -1
+anchor_right = 0.0659722
+anchor_bottom = 0.0185185
+offset_left = 56.0
+offset_top = 485.0
+offset_right = 220.0
+offset_bottom = 516.0
+scale = Vector2(0.366067, 0.461861)
+text = "   "
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="TextureRect/Menu"]
+modulate = Color(0.0165517, 0.0165517, 0.0165517, 1)
+anchors_preset = -1
+anchor_left = -0.0121528
+anchor_top = -0.00462963
+anchor_right = 0.0234375
+anchor_bottom = 0.0138889
+offset_left = 70.0
+offset_top = 515.0
+offset_right = 158.0
+offset_bottom = 546.0
+scale = Vector2(0.683124, 0.461944)
+text = "  "
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="eneym" parent="." instance=ExtResource("3_b3jyw")]
+position = Vector2(911, 317)
+scale = Vector2(0.3, 0.3)
+max_hp = 45
+current_hp = 45
+attack_power = 12
+
+[node name="ProgressEnemy" type="ProgressBar" parent="eneym"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = -170.0
+offset_right = 20.0
+offset_bottom = -143.0
+grow_horizontal = 2
+scale = Vector2(1.57284, 1.96117)
+theme_override_styles/background = SubResource("StyleBoxFlat_pcp5e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_t7qxw")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="eneym/ProgressEnemy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelEnemy" type="Label" parent="eneym"]
+offset_left = -326.667
+offset_top = -56.6667
+offset_right = -286.667
+offset_bottom = -33.6667
+scale = Vector2(5.28298, 7.58406)
+theme_override_colors/font_color = Color(0.996078, 0.686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyPunch" type="AudioStreamPlayer2D" parent="eneym"]
+position = Vector2(-900, 216.667)
+stream = ExtResource("5_vcldm")
+
+[node name="Player" parent="." instance=ExtResource("4_kyqxr")]
+position = Vector2(252, 325)
+scale = Vector2(0.3, 0.3)
+max_hp = 50
+current_hp = 50
+attack_power = 15
+
+[node name="ProgressPlay" type="ProgressBar" parent="Player"]
+offset_left = -116.667
+offset_top = -203.333
+offset_right = 33.3333
+offset_bottom = -176.333
+scale = Vector2(1.92438, 1.72268)
+theme_override_styles/background = SubResource("StyleBoxFlat_fb5fa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lh6qd")
+step = 1.0
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Player/ProgressPlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.73197
+offset_top = -0.00019592
+offset_right = -1.73198
+offset_bottom = 0.999804
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelPlayer" type="Label" parent="Player"]
+offset_left = -240.0
+offset_top = -80.0
+offset_right = -200.0
+offset_bottom = -56.9997
+scale = Vector2(5.28298, 7.58406)
+theme_override_colors/font_color = Color(0.996078, 0.686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PunchSound" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(0, 0.000366211)
+stream = ExtResource("6_ly0tx")
+pitch_scale = 0.9
+
+[node name="HealSound" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("8_m4125")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 152.0
+offset_top = 525.0
+offset_right = 660.0
+offset_bottom = 656.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.379921
+anchor_top = 1.85496
+anchor_right = 1.83071
+anchor_bottom = 4.08397
+offset_left = -13.0
+offset_top = -378.0
+offset_right = -233.0
+offset_bottom = -364.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_b3jyw")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Label/TextureRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00193424
+anchor_top = -0.0228758
+anchor_right = 0.998066
+anchor_bottom = 0.977124
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fgo47")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bgSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_kyqxr")
+volume_db = -15.0
+pitch_scale = 1.44
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="TextureRect/Menu/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TextureRect/Menu/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TextureRect/Menu/Button3" to="." method="_on_button_3_pressed"]

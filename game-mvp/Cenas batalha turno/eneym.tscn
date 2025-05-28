@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cymru2m3uv56y"]
+
+[ext_resource type="Script" uid="uid://vaeirk7essgj" path="res://Scripts batalha turno/eneym.gd" id="1_f7iq3"]
+[ext_resource type="Texture2D" uid="uid://dgk4kstf3w1w1" path="res://Assets batalha turno/characters/D90.png" id="2_f7iq3"]
+
+[node name="eneym" type="Node2D"]
+scale = Vector2(0.65, 0.65)
+script = ExtResource("1_f7iq3")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1.53846, 53.8462)
+texture = ExtResource("2_f7iq3")

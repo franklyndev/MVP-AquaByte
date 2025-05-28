@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bys4mm0evi5s1"
+path="res://.godot/imported/Punch 1.wav-18c74e46f25db9c01182e0f5b9851718.sample"
+
+[deps]
+
+source_file="res://Sound batalha turno/Punch 1.wav"
+dest_files=["res://.godot/imported/Punch 1.wav-18c74e46f25db9c01182e0f5b9851718.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
