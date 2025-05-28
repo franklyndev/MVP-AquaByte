@@ -2,14 +2,14 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
-const vida_max = 3
+const vida_max = 5
 const dano = 1
 
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var vida_label: Label = $vida_bar/vida_label
-@onready var vida_bar: ProgressBar = $ProgressBar
+@onready var vida_label: Label = $vida_label
+
 
 
 
@@ -21,9 +21,6 @@ var is_paused: bool = false
 var invulneravel: bool = false
 
 func _ready() -> void:
-	if vida_bar:
-		vida_bar.min_value = 0
-		vida_bar.max_value = vida_max
 	atualizar_barra_vida()
 	
 
@@ -90,8 +87,6 @@ func _on_spike_body_entered(body: Node2D) -> void:
 		die()
 		
 func atualizar_barra_vida():
-	if vida_bar:
-		vida_bar.value = vida
 	if vida_label:
 		vida_label.text = "%d/%d" % [vida, vida_max]
 		
@@ -110,7 +105,7 @@ func die():
 	velocity = Vector2.ZERO
 	anim.play("hurt")
 
-func _on_hitbox_body_entered(body: Node2D) -> void:
+func _on_hitbox_body_entered(body: Node2D) -> void:	
 	if body.is_in_group("enemy") and is_attacking:
 		if body.has_method("take_damage"):
 			body.take_damage(dano)
@@ -119,4 +114,11 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 func _on_hurtbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		take_damage(dano)
+		
+		
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		get_tree().change_scene_to_file("res://Scenes/caverna.tscn")
 		

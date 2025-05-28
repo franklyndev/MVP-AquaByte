@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://flwsjvt11uvh" path="res://Assets_npc/Woman_idle.png" id="1_0uacm"]
 [ext_resource type="Script" uid="uid://no71p1wlmm71" path="res://Assets_npc/cena_npc/npc_mae.gd" id="1_k1msf"]
-[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="3_fboeg"]
+[ext_resource type="FontFile" uid="uid://cei47lh1qwluu" path="res://Menu-assets/Font/arial_narrow_7.ttf" id="3_fboeg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fboeg"]
 size = Vector2(21, 42)
@@ -45,8 +45,8 @@ animations = [{
 
 [sub_resource type="LabelSettings" id="LabelSettings_uv7l8"]
 font = ExtResource("3_fboeg")
-font_size = 12
-outline_size = 3
+font_size = 33
+outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
 [node name="npcmae" type="Node2D"]
@@ -61,18 +61,19 @@ position = Vector2(-5, -13)
 shape = SubResource("RectangleShape2D_fboeg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(9, -23)
+position = Vector2(-18, -23)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_0c7hm")
 autoplay = "default"
 frame_progress = 0.428948
+flip_h = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = -13.5
+offset_left = -10.5
 offset_top = -41.5
-offset_right = 46.5
-offset_bottom = -29.5
-scale = Vector2(0.308357, 0.371048)
+offset_right = 63.5
+offset_bottom = -5.5
+scale = Vector2(0.178489, 0.157991)
 text = "teste"
 label_settings = SubResource("LabelSettings_uv7l8")
 horizontal_alignment = 1

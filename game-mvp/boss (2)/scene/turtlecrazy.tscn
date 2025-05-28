@@ -41,7 +41,7 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [false]
 }
 tracks/3/type = "value"
@@ -126,7 +126,7 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.201423),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
+"update": 0,
 "values": [false, true]
 }
 tracks/3/type = "method"
@@ -302,7 +302,7 @@ transitions = ["Start", "entra_em_cena", SubResource("AnimationNodeStateMachineT
 graph_offset = Vector2(0, 28.0661)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpg6w"]
-size = Vector2(45, 3)
+size = Vector2(40.5, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsq7s"]
 size = Vector2(109, 43)
@@ -337,14 +337,10 @@ scale_max = 20.0
 scale_curve = SubResource("CurveTexture_rbe58")
 color_ramp = SubResource("GradientTexture1D_wnaad")
 
-[node name="turtlecrazy" type="CharacterBody2D"]
+[node name="turtlecrazy" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 37
 script = ExtResource("1_han2x")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.25, 11.5)
-shape = SubResource("RectangleShape2D_nldie")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -358,6 +354,10 @@ position = Vector2(-7, -1)
 [node name="bomb_point" type="Marker2D" parent="Sprite2D"]
 unique_name_in_owner = true
 position = Vector2(-1, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.25, 11.5)
+shape = SubResource("RectangleShape2D_nldie")
 
 [node name="anime" type="AnimationPlayer" parent="."]
 libraries = {
@@ -376,7 +376,6 @@ parameters/conditions/time_projetil = false
 [node name="detector" type="RayCast2D" parent="."]
 position = Vector2(0, 13)
 target_position = Vector2(-35, 0)
-collision_mask = 2
 
 [node name="bomb_cooldown" type="Timer" parent="."]
 wait_time = 2.5
@@ -384,14 +383,16 @@ wait_time = 2.5
 [node name="projetil_cooldown" type="Timer" parent="."]
 
 [node name="hurtbox" type="Area2D" parent="."]
-collision_layer = 2
+collision_layer = 4
+collision_mask = 2
 
 [node name="colision" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(-4.5, -16.5)
+position = Vector2(2.25, 7)
 shape = SubResource("RectangleShape2D_xpg6w")
 disabled = true
 
 [node name="player_detector" type="Area2D" parent="."]
+visible = false
 position = Vector2(-4.5, -16.5)
 
 [node name="colision" type="CollisionShape2D" parent="player_detector"]

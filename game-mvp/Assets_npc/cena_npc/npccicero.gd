@@ -9,16 +9,18 @@ extends Node2D
 var player_in_area: bool = false
 var dialog_index: int = -1
 var dialog_list: Array[String] = [
-	"MAE",
-	"Filho…", 
-	"toma cuidado.", 
-	"Nem tudo são flores…",
-	"Hoje em dia…", 
-	"as pessoas se preocupam mais", 
-	"com bonecos de bebê reborn…", 
-	"do que com a própria água", 
-	"que nos dá vida.",
-	"Por isso… estamos assim"
+"MUAHAHAHA!",
+"Você realmente achou que limpar o oceano", 
+"seria tão fácil assim?",
+"Eu sou o DESTRUIDOR…", 
+"e só quero ver este oceano", 
+"cada vez mais POLUÍDO!",
+"Deixem que as pessoas se preocupem", 
+"com o TÉRMINO da Virgínia", 
+"ou com suas bonecas reborn…",
+"Enquanto isso, eu alimento a minha Cici com CANUDOS", 
+"e espalho ainda mais destruição!",
+	
 ]
 
 var dialog_shown: bool = false  # impede repetir
@@ -39,6 +41,7 @@ func _process(delta):
 			dialog_index = -1
 			dialog_shown = true  # Após o último diálogo, marca como mostrado
 			_pause_player(false)  # Retorna o jogador ao normal
+			get_tree().change_scene_to_file("batalha")
 			
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:

@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
 const SPEED := 200.0
-const EXPLOSION = preload("res://scene/explosion.tscn")
+const EXPLOSION = preload("res://boss (2)/scene/explosion.tscn")
 @onready var sprite: Sprite2D = $sprite
 @onready var proj_colision: CollisionShape2D = $proj_colision
 @onready var colision: CollisionShape2D = $detector/colision
