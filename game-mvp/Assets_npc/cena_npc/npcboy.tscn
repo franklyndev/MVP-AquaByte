@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://t4fp26hbcuct" path="res://Assets_npc/cena_npc/npcboy.gd" id="1_1islw"]
 [ext_resource type="Texture2D" uid="uid://0e33yl8ujv6d" path="res://Assets_npc/Boy_idle.png" id="1_x6p88"]
-[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="2_bnvqj"]
+[ext_resource type="FontFile" uid="uid://cei47lh1qwluu" path="res://Menu-assets/Font/arial_narrow_7.ttf" id="3_1islw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2b1q"]
 size = Vector2(15.5, 25.5)
@@ -44,9 +44,9 @@ animations = [{
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1islw"]
-font = ExtResource("2_bnvqj")
-font_size = 12
-outline_size = 3
+font = ExtResource("3_1islw")
+font_size = 33
+outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
 [node name="npcboy" type="Node2D"]
@@ -60,16 +60,17 @@ position = Vector2(-0.75, -13.75)
 shape = SubResource("RectangleShape2D_s2b1q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(12, -25)
+position = Vector2(-12.5, -25)
 sprite_frames = SubResource("SpriteFrames_jw1lg")
 autoplay = "default"
+flip_h = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = -6.0
+offset_left = -4.5
 offset_top = -31.5
-offset_right = 54.0
-offset_bottom = -19.5
-scale = Vector2(0.196991, 0.224956)
+offset_right = 69.5
+offset_bottom = 4.5
+scale = Vector2(0.114868, 0.11162)
 text = "teste"
 label_settings = SubResource("LabelSettings_1islw")
 horizontal_alignment = 1

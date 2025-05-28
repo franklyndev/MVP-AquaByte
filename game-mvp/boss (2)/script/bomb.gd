@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-const EXPLOSION = preload("res://scene/explosion.tscn")
+const EXPLOSION = preload("res://boss (2)/scene/explosion.tscn")
 @onready var colision: CollisionShape2D = $colision
 
 func _on_body_entered(body: Node) -> void:

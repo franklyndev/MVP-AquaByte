@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://c1hmcytxjmcb3"]
+
+[ext_resource type="Texture2D" uid="uid://1euclmxf5v3f" path="res://Assets_npc/parado-ani01.png" id="1_01ujt"]
+[ext_resource type="Script" uid="uid://ebn2lcu0bfwk" path="res://Assets_npc/cena_npc/npcyago.gd" id="1_rc2o0"]
+[ext_resource type="Texture2D" uid="uid://mxn8wwqe2yka" path="res://Assets_npc/apontando-ani01.png" id="2_rc2o0"]
+[ext_resource type="FontFile" uid="uid://cei47lh1qwluu" path="res://Menu-assets/Font/arial_narrow_7.ttf" id="4_bmfxr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmfxr"]
+size = Vector2(149, 285.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmfxr"]
+atlas = ExtResource("1_01ujt")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whpep"]
+atlas = ExtResource("2_rc2o0")
+region = Rect2(0, 0, 1466, 1536)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5odw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmfxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whpep")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.2
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_whpep"]
+font = ExtResource("4_bmfxr")
+font_size = 33
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="npcyago" type="Node2D"]
+script = ExtResource("1_rc2o0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -141)
+shape = SubResource("RectangleShape2D_bmfxr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -140.25)
+scale = Vector2(0.191406, 0.189779)
+sprite_frames = SubResource("SpriteFrames_q5odw")
+autoplay = "default"
+frame_progress = 0.998749
+
+[node name="Label" type="Label" parent="."]
+offset_left = -40.0
+offset_top = -322.0
+offset_right = 34.0
+offset_bottom = -280.0
+text = "teste"
+label_settings = SubResource("LabelSettings_whpep")
+justification_flags = 235
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

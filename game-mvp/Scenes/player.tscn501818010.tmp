@@ -382,18 +382,19 @@ position = Vector2(3.75, -30.75)
 shape = SubResource("RectangleShape2D_v0iea")
 
 [node name="vida_label" type="Label" parent="."]
-offset_left = -9.0
-offset_top = -81.5
-offset_right = 42.0
-offset_bottom = -49.5
+offset_left = -13.0
+offset_top = -74.0
+offset_right = 38.0
+offset_bottom = -47.0
 scale = Vector2(0.736885, 0.68)
-text = "5/5"
+text = "5
+"
 label_settings = SubResource("LabelSettings_vgqql")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Hearts" type="Sprite2D" parent="vida_label"]
-position = Vector2(2.03559, 15.4412)
+position = Vector2(9.49945, 7.35294)
 scale = Vector2(1.0178, 1.01103)
 texture = ExtResource("4_vgqql")
 vframes = 4
