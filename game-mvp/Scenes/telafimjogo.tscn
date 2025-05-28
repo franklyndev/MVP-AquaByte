@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc16t8wuab1w"]
+
+[ext_resource type="Script" uid="uid://cce51ebis1c2v" path="res://Scripts/telafimdejogo.gd" id="1_m4yqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eye78"]
+bg_color = Color(0.0338533, 0.0338533, 0.0338532, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_m4yqr"]
+
+[node name="ScrollContainer" type="ScrollContainer" node_paths=PackedStringArray("text_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eye78")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_m4yqr")
+text_node = NodePath("MarginContainer/RichTextLabel")
+credits_time = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = SubResource("SystemFont_m4yqr")
+bbcode_enabled = true
+text = "CRÉDITOS
+
+Este universo de pixels e sonhos foi criado por uma equipe cheia de talento, garra e boas ideias:
+
+
+MESTRES DA PROGRAMAÇÃO:
+
+Pedro Henrique Costa da Silva
+
+Guilherme D Jesus
+
+Luiz Henrique Bomfim de Melo
+
+Andrey Santos Oliveira
+
+Eduardo Marquez Pereira Santos
+
+Arquitetos Visuais (Design e Arte):
+
+Anderson Felipe Lima Santos
+
+Franklyn dos Santos Silva
+
+Marcello Victor Xavier Barreto Carvalho
+
+
+MAGIA SONORA:
+
+Gabriel Santos de Souza
+
+
+O GUARDIÃO DO SCRUM:
+
+Adson Santos Valverde
+
+
+O CRIADOR DA HISTÓRIA E IDEIAS:
+
+João Carlos dos Santos
+
+
+Obrigado a todos que embarcaram nessa aventura conosco — professores, amigos e familiares que acreditaram e deram força em cada fase.
+
+Você jogou, viveu e fez parte dessa jornada. Até a próxima missão!
+
+\"Aqui, mais do que um jogo, construímos mundos.\""
+fit_content = true
+scroll_following = true
+horizontal_alignment = 1
+vertical_alignment = 1
