@@ -896,11 +896,11 @@ rotation_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Player" parent="." instance=ExtResource("20_wj1r8")]
-position = Vector2(17, 318)
+position = Vector2(24, 318)
 scale = Vector2(1.2, 1.2)
 
 [node name="turtlecrazy" parent="." instance=ExtResource("22_o4xeb")]
-position = Vector2(11482, 455)
+position = Vector2(11482, 464)
 scale = Vector2(3, 3)
 
 [node name="killzone" type="Node" parent="."]

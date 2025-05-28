@@ -2,7 +2,7 @@ extends CharacterBody2D
 @export var boss_instance : PackedScene = preload("res://boss (2)/scene/turtlecrazy.tscn")
 const BOMB = preload("res://boss (2)/scene/bomb.tscn")
 const PROJETIL = preload("res://boss (2)/scene/projetil.tscn")
-const SPEED = 5000.0
+const SPEED = 8000.0
 var direction = -1
 
 @onready var detector: RayCast2D = $detector
@@ -64,7 +64,7 @@ func _physics_process(delta):
 			player_hit = false
 			$hurtbox/colision.set_deferred("disabled", false)
 
-	if turn_cont <= 2:
+	if turn_cont <= 1:
 		animetree.set("parameters/conditions/can_move", true)
 		animetree.set("parameters/conditions/time_projetil", false)
 	elif projetil_cont >= 2:
