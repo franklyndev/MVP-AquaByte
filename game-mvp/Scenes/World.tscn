@@ -994,7 +994,7 @@ offset_bottom = 1152.0
 scale = Vector2(0.5625, 0.5625)
 texture = ExtResource("5_op4cu")
 
-[node name="Praia" type="TextureRect" parent="."]
+[node name="Praia_" type="TextureRect" parent="."]
 offset_left = 7688.0
 offset_right = 18911.0
 offset_bottom = 1152.0
@@ -1002,7 +1002,7 @@ scale = Vector2(0.566895, 0.5625)
 texture = ExtResource("5_kn06e")
 stretch_mode = 1
 
-[node name="Entrada-caverna" type="Sprite2D" parent="Praia"]
+[node name="Entrada-caverna" type="Sprite2D" parent="Praia_"]
 position = Vector2(12238.6, 576)
 scale = Vector2(0.992247, 1)
 texture = ExtResource("6_7yo87")
