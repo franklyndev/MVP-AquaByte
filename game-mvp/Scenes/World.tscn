@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://5x0680mbnnfa"]
+[gd_scene load_steps=44 format=3 uid="uid://5x0680mbnnfa"]
 
 [ext_resource type="Texture2D" uid="uid://c2xusldtaaxcp" path="res://backs/floresta.png" id="1_kn06e"]
 [ext_resource type="PackedScene" uid="uid://bcc3eb2ps3a48" path="res://Scenes/player.tscn" id="3_45d1s"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dyjw6kt7h0doe" path="res://backs/entrada praia.png" id="5_op4cu"]
 [ext_resource type="Texture2D" uid="uid://diteqc1o3stmn" path="res://backs/entrada-caverna.png" id="6_7yo87"]
 [ext_resource type="Texture2D" uid="uid://c7rudn1txc6e" path="res://Assets_cabana/1_cabana.png" id="6_y8a40"]
-[ext_resource type="Texture2D" path="res://Forest Tileset/Tiles/tilemap_new_softy_sand.png" id="7_8l3nt"]
 [ext_resource type="Texture2D" uid="uid://7ksxvu1jypr8" path="res://Assets_cabana/3_cabana.png" id="7_n1aqv"]
 [ext_resource type="Texture2D" uid="uid://b068ibyylfpqy" path="res://Assets_cabana/4_cabana.png" id="8_d2jk0"]
 [ext_resource type="Texture2D" uid="uid://ct51js5li0jdy" path="res://Forest Tileset/Tiles/areia melhor.png" id="8_kwl8l"]
@@ -377,7 +376,6 @@ texture = ExtResource("4_45d1s")
 6:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xiqgv"]
-texture = ExtResource("7_8l3nt")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
