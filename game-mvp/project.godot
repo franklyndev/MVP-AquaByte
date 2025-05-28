@@ -15,10 +15,15 @@ run/main_scene="uid://cachn2ts0qnjc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*res://GameState.gd"
+
 [global_group]
 
 player=""
 enemy=""
+GameState=""
 
 [input]
 

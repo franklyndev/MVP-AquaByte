@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://5x0680mbnnfa"]
+[gd_scene load_steps=44 format=3 uid="uid://5x0680mbnnfa"]
 
 [ext_resource type="Texture2D" uid="uid://c2xusldtaaxcp" path="res://backs/floresta.png" id="1_kn06e"]
 [ext_resource type="PackedScene" uid="uid://bcc3eb2ps3a48" path="res://Scenes/player.tscn" id="3_45d1s"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://c4yyir4j73s3n" path="res://Assets_npc/cena_npc/npcboy.tscn" id="31_371b6"]
 [ext_resource type="PackedScene" uid="uid://d37h7gsesra28" path="res://Assets_npc/cena_npc/npc_mae.tscn" id="31_mq4nq"]
 [ext_resource type="PackedScene" uid="uid://j3wcxfmrbusy" path="res://Assets definitivos/cuspidor.tscn" id="37_n1aqv"]
+[ext_resource type="AudioStream" uid="uid://27hocs4ej46n" path="res://Sound/Jogo.mp3" id="38_d2jk0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y7y61"]
 texture = ExtResource("4_45d1s")
@@ -1427,5 +1428,10 @@ position = Vector2(12766, 574)
 
 [node name="enemy7" parent="." instance=ExtResource("28_g01fq")]
 position = Vector2(5944, 576)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("38_d2jk0")
+volume_db = -22.487
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]

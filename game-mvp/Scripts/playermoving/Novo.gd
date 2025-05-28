@@ -9,8 +9,9 @@ const dano = 1
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var vida_label: Label = $vida_label
-
-
+@onready var audio_faca: AudioStreamPlayer = $Faca
+@onready var hurtsound: AudioStreamPlayer = $Hurtsound
+@onready var deathsound: AudioStreamPlayer = $deathsound
 
 
 var vida: int = vida_max
@@ -52,6 +53,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Ataque") and not is_attacking:
 		is_attacking = true
 		anim.play("Attack")
+		audio_faca.play()
 		velocity.x = 0
 		
 	# Se estiver atacando, não mudar animação
@@ -95,6 +97,8 @@ func take_damage(amount:int):
 		return
 	vida -= amount
 	atualizar_barra_vida()
+	if not hurtsound.playing:
+		hurtsound.play()
 	if vida <= 0:
 		die()
 		
@@ -104,6 +108,7 @@ func die():
 	atualizar_barra_vida()
 	velocity = Vector2.ZERO
 	anim.play("hurt")
+	deathsound.play()
 
 func _on_hitbox_body_entered(body: Node2D) -> void:	
 	if body.is_in_group("enemy") and is_attacking:

@@ -5,6 +5,7 @@ extends Node2D
 @onready var player: Node = null
 @onready var timer: Timer = $Timer
 
+@onready var audio: AudioStreamPlayer = $"../AudioStreamPlayer"
 
 var player_in_area: bool = false
 var dialog_index: int = -1
@@ -77,7 +78,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _pause_player(pause: bool) -> void:
 	if player and "is_paused" in player:
 		player.is_paused = pause
-		
+
 	#get_tree().paused = pause
 
 

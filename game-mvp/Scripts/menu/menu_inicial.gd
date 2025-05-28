@@ -15,7 +15,7 @@ func _on_inicar_pressed() -> void:
 func _on_creditos_pressed() -> void:
 	audio_confirm.play()
 	await get_tree().create_timer(0.35).timeout
-	get_tree().change_scene_to_file("creditos")  #Colocar caminho da cena dos creditos
+	get_tree().change_scene_to_file("res://Scenes/telafimjogo.tscn")  #Colocar caminho da cena dos creditos
 
 
 func _on_sair_do_jogo_pressed() -> void:	

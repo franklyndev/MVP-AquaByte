@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://bm0lmiarhuvlw"]
+[gd_scene load_steps=31 format=3 uid="uid://bm0lmiarhuvlw"]
 
 [ext_resource type="Texture2D" uid="uid://dhkyl8315nekp" path="res://backs/Caverna.png" id="1_cou8j"]
+[ext_resource type="Script" uid="uid://niikfpsq0dwm" path="res://Scripts/caverna.gd" id="1_ewbyo"]
 [ext_resource type="Texture2D" uid="uid://bsng7h6pjje3s" path="res://Forest Tileset/Tiles/cave tile 2.png" id="2_1f55b"]
 [ext_resource type="Texture2D" uid="uid://bena5enlmpah1" path="res://backs/cavecomlixo.png" id="2_qyhf2"]
 [ext_resource type="Texture2D" uid="uid://j3aubvft8dmx" path="res://Assets definitivos/liveixa vermelha.png" id="4_48k20"]
@@ -25,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://bht8yit5qrt4f" path="res://zona-dano/killzone.tscn" id="23_aldle"]
 [ext_resource type="PackedScene" uid="uid://dlkvb8ou28vp3" path="res://Scenes/enemy.tscn" id="24_f8f2v"]
 [ext_resource type="PackedScene" uid="uid://c1hmcytxjmcb3" path="res://Assets_npc/cena_npc/npcyago.tscn" id="26_vj2v0"]
+[ext_resource type="AudioStream" uid="uid://27hocs4ej46n" path="res://Sound/Jogo.mp3" id="27_ewbyo"]
 [ext_resource type="PackedScene" uid="uid://b00nvdwgw88tn" path="res://Assets_npc/cena_npc/npccicero.tscn" id="27_r0oq3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppnfb"]
@@ -723,6 +725,7 @@ physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_ppnfb")
 
 [node name="Caverna" type="Node2D"]
+script = ExtResource("1_ewbyo")
 
 [node name="Caverna" type="TextureRect" parent="."]
 offset_right = 10232.0
@@ -883,15 +886,16 @@ scale = Vector2(2.119, 2.07)
 texture = ExtResource("19_bmyxb")
 
 [node name="camera" parent="." instance=ExtResource("21_o4xeb")]
-position = Vector2(457, 191)
+position = Vector2(439, 158)
 scale = Vector2(1.2, 1.2)
 zoom = Vector2(2, 2)
+limit_top = 0
 limit_bottom = 700
 rotation_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Player" parent="." instance=ExtResource("20_wj1r8")]
-position = Vector2(22, 323)
+position = Vector2(6487, 545)
 scale = Vector2(1.2, 1.2)
 
 [node name="turtlecrazy" parent="." instance=ExtResource("22_o4xeb")]
@@ -921,10 +925,12 @@ position = Vector2(5276, 539)
 scale = Vector2(-14.7008, 2.00912)
 
 [node name="enemy" parent="." instance=ExtResource("24_f8f2v")]
-position = Vector2(1498, 550)
+position = Vector2(1509, 557)
+scale = Vector2(0.8, 0.8)
 
 [node name="enemy2" parent="." instance=ExtResource("24_f8f2v")]
 position = Vector2(3754, 560)
+scale = Vector2(0.8, 0.8)
 
 [node name="npcyago" parent="." instance=ExtResource("26_vj2v0")]
 position = Vector2(6646, 562)
@@ -933,3 +939,9 @@ scale = Vector2(0.382166, 0.376644)
 [node name="npccicero" parent="." instance=ExtResource("27_r0oq3")]
 position = Vector2(9693, 563)
 scale = Vector2(0.504356, 0.515745)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_ewbyo")
+volume_db = -22.487
+pitch_scale = 0.71
+autoplay = true

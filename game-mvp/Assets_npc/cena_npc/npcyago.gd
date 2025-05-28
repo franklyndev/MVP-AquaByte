@@ -3,8 +3,7 @@ extends Node2D
 @onready var label: Label = $Label
 @onready var player: Node = null
 @onready var timer: Timer = $Timer
-
-
+var return_position: Vector2 = Vector2.ZERO
 var player_in_area: bool = false
 var dialog_index: int = -1
 var dialog_list: Array[String] = [
@@ -21,6 +20,7 @@ var dialog_list: Array[String] = [
 var dialog_shown: bool = false  # impede repetir
 
 func _ready():
+	dialog_shown = GameState.dialog_yago_concluido  # Pega valor salvo globalmente
 	label.visible = false
 	
 func _process(delta):
@@ -35,8 +35,10 @@ func _process(delta):
 			label.visible = false
 			dialog_index = -1
 			dialog_shown = true  # Após o último diálogo, marca como mostrado
+			GameState.dialog_yago_concluido = true
 			_pause_player(false)  # Retorna o jogador ao normal
-			get_tree().change_scene_to_file("batalha")
+			GameState.save_position(player.global_position)
+			get_tree().change_scene_to_file("res://Cenas batalha turno/combat_sccene.tscn")
 			
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:

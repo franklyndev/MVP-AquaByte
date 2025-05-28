@@ -258,6 +258,18 @@ pitch_scale = 1.44
 autoplay = true
 parameters/looping = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 320)
+zoom = Vector2(1.03, 1.03)
+limit_left = -1
+limit_top = 0
+limit_right = 1152
+limit_bottom = 644
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+editor_draw_limits = true
+
 [connection signal="pressed" from="TextureRect/Menu/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TextureRect/Menu/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="TextureRect/Menu/Button3" to="." method="_on_button_3_pressed"]
