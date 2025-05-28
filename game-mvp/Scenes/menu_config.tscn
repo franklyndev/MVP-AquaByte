@@ -129,9 +129,8 @@ theme_override_constants/outline_size = 14
 theme_override_fonts/font = ExtResource("2_f12sv")
 text = "LEFT"
 
-[node name="Seta-left" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/left"]
-position = Vector2(121, 10)
-rotation = -0.00872665
+[node name="A" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/left"]
+position = Vector2(111, 14)
 texture = ExtResource("5_v8xab")
 
 [node name="right" type="Label" parent="MarginContainer2/VBoxContainer2"]
@@ -143,9 +142,8 @@ theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("2_f12sv")
 text = "RIGHT"
 
-[node name="Seta-right" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/right"]
-position = Vector2(123, 11)
-rotation = -0.0139626
+[node name="D" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/right"]
+position = Vector2(114, 7)
 texture = ExtResource("6_jg3rb")
 
 [node name="Jump" type="Label" parent="MarginContainer2/VBoxContainer2"]
