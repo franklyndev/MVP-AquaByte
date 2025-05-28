@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://drn6v0t1y7pjb"]
+[gd_scene load_steps=13 format=3 uid="uid://drn6v0t1y7pjb"]
 
 [ext_resource type="Texture2D" uid="uid://cgd3ec0ctpu4y" path="res://Menu-assets/raw2.png" id="1_kkprl"]
 [ext_resource type="Script" uid="uid://bektora8lcawp" path="res://Scripts/menu/menu_config.gd" id="1_rabp0"]
 [ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="2_f12sv"]
 [ext_resource type="Theme" uid="uid://tx4qq5mlii5w" path="res://Menu-assets/pause_menu.tres" id="3_kkprl"]
-[ext_resource type="Texture2D" uid="uid://dumpvke22qnyr" path="res://Menu-assets/seta - Copia (2).png" id="4_kkprl"]
 [ext_resource type="Texture2D" uid="uid://bvu1gg6qsa05r" path="res://Menu-assets/space.png" id="5_rabp0"]
+[ext_resource type="Texture2D" uid="uid://c1c6g8whpd3y8" path="res://Assets definitivos/A.png" id="5_v8xab"]
+[ext_resource type="Texture2D" uid="uid://b4a28i86loyw" path="res://Assets definitivos/d.png" id="6_jg3rb"]
 [ext_resource type="AudioStream" uid="uid://8v2g6o7ysyqb" path="res://Sound/013_Confirm_03.wav" id="7_40i8v"]
+[ext_resource type="Texture2D" uid="uid://4ucqks7bun6c" path="res://Assets definitivos/j.png" id="8_ov8n0"]
 [ext_resource type="AudioStream" uid="uid://myk7bsuniafa" path="res://Sound/001_Hover_01.wav" id="8_rgsga"]
 
 [sub_resource type="Theme" id="Theme_cjgmv"]
@@ -128,10 +130,9 @@ theme_override_fonts/font = ExtResource("2_f12sv")
 text = "LEFT"
 
 [node name="Seta-left" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/left"]
-position = Vector2(140, 7.00001)
-rotation = 1.5708
-scale = Vector2(0.389566, 0.478992)
-texture = ExtResource("4_kkprl")
+position = Vector2(121, 10)
+rotation = -0.00872665
+texture = ExtResource("5_v8xab")
 
 [node name="right" type="Label" parent="MarginContainer2/VBoxContainer2"]
 layout_mode = 2
@@ -143,10 +144,9 @@ theme_override_fonts/font = ExtResource("2_f12sv")
 text = "RIGHT"
 
 [node name="Seta-right" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/right"]
-position = Vector2(140, 11)
-rotation = -1.5708
-scale = Vector2(0.389566, 0.478992)
-texture = ExtResource("4_kkprl")
+position = Vector2(123, 11)
+rotation = -0.0139626
+texture = ExtResource("6_jg3rb")
 
 [node name="Jump" type="Label" parent="MarginContainer2/VBoxContainer2"]
 layout_mode = 2
@@ -158,7 +158,7 @@ theme_override_fonts/font = ExtResource("2_f12sv")
 text = "JUMP"
 
 [node name="Space" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/Jump"]
-position = Vector2(192, 10)
+position = Vector2(175, 10)
 scale = Vector2(0.378437, 0.344595)
 texture = ExtResource("5_rabp0")
 
@@ -170,6 +170,10 @@ theme_override_colors/font_outline_color = Color(0.129412, 0.168627, 0.262745, 1
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("2_f12sv")
 text = "ATTACK"
+
+[node name="attack" type="Sprite2D" parent="MarginContainer2/VBoxContainer2/attack"]
+position = Vector2(134, 9)
+texture = ExtResource("8_ov8n0")
 
 [node name="Audio_confirm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_40i8v")
