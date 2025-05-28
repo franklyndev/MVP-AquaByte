@@ -171,22 +171,6 @@ tracks/0/keys = {
 "values": [1, 2, 3, 4, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_6udbs"]
-resource_name = "move "
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 4, 0, 4]
-}
-
 [sub_resource type="Animation" id="Animation_twg2t"]
 resource_name = "projetil_attack"
 step = 0.1
@@ -219,6 +203,22 @@ tracks/0/keys = {
 "values": [7]
 }
 
+[sub_resource type="Animation" id="Animation_6udbs"]
+resource_name = "move"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 4, 0, 4]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bkk4o"]
 _data = {
 &"RESET": SubResource("Animation_uf3x7"),
@@ -226,7 +226,7 @@ _data = {
 &"bomb_attack": SubResource("Animation_6cwsj"),
 &"death": SubResource("Animation_mfnkn"),
 &"entra_em_cena": SubResource("Animation_han2x"),
-&"move ": SubResource("Animation_6udbs"),
+&"move": SubResource("Animation_6udbs"),
 &"projetil_attack": SubResource("Animation_twg2t"),
 &"vulneravel": SubResource("Animation_rbe58")
 }
@@ -292,17 +292,17 @@ states/death/node = SubResource("AnimationNodeAnimation_lxw31")
 states/death/position = Vector2(966.667, 176.733)
 states/entra_em_cena/node = SubResource("AnimationNodeAnimation_mfnkn")
 states/entra_em_cena/position = Vector2(322.667, 97.6543)
-"states/move /node" = SubResource("AnimationNodeAnimation_cxgla")
-"states/move /position" = Vector2(598.667, 99.1139)
+states/move/node = SubResource("AnimationNodeAnimation_cxgla")
+states/move/position = Vector2(597.778, 100)
 states/projetil_attack/node = SubResource("AnimationNodeAnimation_kc2bh")
 states/projetil_attack/position = Vector2(597.778, 222)
 states/vulneravel/node = SubResource("AnimationNodeAnimation_ccfh8")
 states/vulneravel/position = Vector2(794.667, 221.857)
-transitions = ["Start", "entra_em_cena", SubResource("AnimationNodeStateMachineTransition_lxw31"), "entra_em_cena", "apresenta", SubResource("AnimationNodeStateMachineTransition_fwrlo"), "apresenta", "move ", SubResource("AnimationNodeStateMachineTransition_d5adr"), "move ", "projetil_attack", SubResource("AnimationNodeStateMachineTransition_1iis0"), "projetil_attack", "move ", SubResource("AnimationNodeStateMachineTransition_if7mu"), "vulneravel", "move ", SubResource("AnimationNodeStateMachineTransition_scbom"), "projetil_attack", "bomb_attack", SubResource("AnimationNodeStateMachineTransition_wnaad"), "bomb_attack", "vulneravel", SubResource("AnimationNodeStateMachineTransition_twg2t")]
+transitions = ["Start", "entra_em_cena", SubResource("AnimationNodeStateMachineTransition_lxw31"), "entra_em_cena", "apresenta", SubResource("AnimationNodeStateMachineTransition_fwrlo"), "apresenta", "move", SubResource("AnimationNodeStateMachineTransition_d5adr"), "move", "projetil_attack", SubResource("AnimationNodeStateMachineTransition_1iis0"), "projetil_attack", "move", SubResource("AnimationNodeStateMachineTransition_if7mu"), "vulneravel", "move", SubResource("AnimationNodeStateMachineTransition_scbom"), "projetil_attack", "bomb_attack", SubResource("AnimationNodeStateMachineTransition_wnaad"), "bomb_attack", "vulneravel", SubResource("AnimationNodeStateMachineTransition_twg2t")]
 graph_offset = Vector2(0, 28.0661)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpg6w"]
-size = Vector2(40.5, 50)
+size = Vector2(57, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsq7s"]
 size = Vector2(109, 43)
@@ -383,11 +383,12 @@ wait_time = 2.5
 [node name="projetil_cooldown" type="Timer" parent="."]
 
 [node name="hurtbox" type="Area2D" parent="."]
-collision_layer = 4
+collision_layer = 36
 collision_mask = 2
 
 [node name="colision" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(2.25, 7)
+position = Vector2(2.5, 7)
+rotation = -1.57175
 shape = SubResource("RectangleShape2D_xpg6w")
 disabled = true
 

@@ -23,8 +23,8 @@ func set_direction(dir):
 	
 
 func _on_detector_body_entered(body):
-	if body.name == "player":
-		body.take_damage()
+	if body.is_in_group("player"):
+		body.take_damage(1)
 	visible = false
 	var explosion_instance = EXPLOSION.instantiate()
 	get_parent().add_child(explosion_instance)

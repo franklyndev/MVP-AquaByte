@@ -37,7 +37,7 @@ func _physics_process(delta):
 
 
 	match state_machine.get_current_node():
-		"move ":
+		"move":
 			$hurtbox/colision.set_deferred("disabled", true)
 			if direction == 1:
 				velocity.x = SPEED * delta
@@ -47,13 +47,13 @@ func _physics_process(delta):
 				sprite_2d.flip_h = false
 		"projetil_attack":
 			velocity.x = 0
-			await get_tree().create_timer(2.0).timeout
+			
 			if can_launch_projetil:
 				lancar_projetil()
 				can_launch_projetil = false
 		"bomb_attack":
 			velocity.x = 0
-			await get_tree().create_timer(2.0).timeout
+			
 			if can_launch_bomb:
 				lancar_bomb()
 				can_launch_bomb = false
@@ -81,7 +81,7 @@ func _physics_process(delta):
 
 	if boss_hp <= 0:
 		state_machine.travel("death")
-		await get_tree().create_timer(4.0).timeout
+		await get_tree().create_timer(2.0).timeout
 		queue_free()
 
 	move_and_slide()
@@ -91,7 +91,7 @@ func lancar_bomb():
 		var bomb_intance = BOMB.instantiate()
 		add_sibling(bomb_intance)
 		bomb_intance.global_position = bomb_point.global_position
-		bomb_intance.apply_impulse(Vector2(randi_range(direction * 75, direction * 200), randi_range(-200, -400)))
+		bomb_intance.apply_impulse(Vector2(randi_range(direction * 100, direction * 300), randi_range(-100, -300)))
 		$bomb_cooldown.start()
 		bomb_cont += 1
 
@@ -118,12 +118,26 @@ func _on_visible_on_screen_enabler_2d_screen_entered() -> void:
 
 
 func _on_hurtbox_body_entered(body: Node2D) -> void:
-	pass
+	if is_dead:
+		return
 
-func create_lose_boss():
-	var boss_scene = boss_instance.instantiate()
-	add_sibling(boss_scene)
-	boss_scene.global_position = position
+	boss_hp -= 1
+	player_hit = true
+	
+	# Resetar os contadores pra garantir que o boss volte a andar
+	turn_cont = 0
+	projetil_cont = 0
+	bomb_cont = 0
+	
+	# Reativar as flags corretas da AnimationTree
+	animetree.set("parameters/conditions/can_move", true)
+	animetree.set("parameters/conditions/time_projetil", false)
+	animetree.set("parameters/conditions/time_bomb", false)
+	animetree.set("parameters/conditions/is_vulneravel", false)
+
+	# Forçar o estado de movimento (depois de corrigir os parâmetros acima)
+	state_machine.travel("move")
+
 	
 func take_damage(amount: int) -> void:
 	if is_dead:
