@@ -302,7 +302,7 @@ transitions = ["Start", "entra_em_cena", SubResource("AnimationNodeStateMachineT
 graph_offset = Vector2(0, 28.0661)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpg6w"]
-size = Vector2(57, 50)
+size = Vector2(5, 45.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsq7s"]
 size = Vector2(109, 43)
@@ -339,7 +339,7 @@ color_ramp = SubResource("GradientTexture1D_wnaad")
 
 [node name="turtlecrazy" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 4
-collision_mask = 37
+collision_mask = 39
 script = ExtResource("1_han2x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -387,8 +387,7 @@ collision_layer = 36
 collision_mask = 2
 
 [node name="colision" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(2.5, 7)
-rotation = -1.57175
+position = Vector2(-26, 8)
 shape = SubResource("RectangleShape2D_xpg6w")
 disabled = true
 
@@ -404,6 +403,7 @@ position = Vector2(-5.96046e-08, 9)
 scale = Vector2(1.45, 2.1)
 
 [node name="explosion" type="GPUParticles2D" parent="."]
+position = Vector2(-24, 21)
 emitting = false
 amount = 50
 one_shot = true
