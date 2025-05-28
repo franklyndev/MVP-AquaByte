@@ -36,6 +36,7 @@ animations = [{
 
 [node name="explosion" type="AnimatedSprite2D"]
 texture_filter = 1
+scale = Vector2(4.25452, 4.1888)
 sprite_frames = SubResource("SpriteFrames_6cxdk")
 autoplay = "default"
 frame = 2

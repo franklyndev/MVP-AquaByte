@@ -374,7 +374,7 @@ parameters/conditions/time_bomb = false
 parameters/conditions/time_projetil = false
 
 [node name="detector" type="RayCast2D" parent="."]
-position = Vector2(0, 13)
+position = Vector2(0, -4)
 target_position = Vector2(-35, 0)
 
 [node name="bomb_cooldown" type="Timer" parent="."]
@@ -392,7 +392,6 @@ shape = SubResource("RectangleShape2D_xpg6w")
 disabled = true
 
 [node name="player_detector" type="Area2D" parent="."]
-visible = false
 position = Vector2(-4.5, -16.5)
 
 [node name="colision" type="CollisionShape2D" parent="player_detector"]
