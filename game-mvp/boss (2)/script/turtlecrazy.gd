@@ -1,7 +1,7 @@
 extends CharacterBody2D
-
-const BOMB = preload("res://scene/bomb.tscn")
-const PROJETIL = preload("res://scene/projetil.tscn")
+@export var boss_instance : PackedScene = preload("res://boss (2)/scene/turtlecrazy.tscn")
+const BOMB = preload("res://boss (2)/scene/bomb.tscn")
+const PROJETIL = preload("res://boss (2)/scene/projetil.tscn")
 const SPEED = 5000.0
 var direction = -1
 
@@ -21,8 +21,8 @@ var can_launch_bomb = true
 var can_launch_projetil := true
 var player_hit := false
 var boss_hp := 1
-
-@export var boss_instance : PackedScene
+var is_dead: bool = false
+#@export var boss_instance : PackedScene
 
 func _ready():
 	set_physics_process(false)
@@ -118,13 +118,24 @@ func _on_visible_on_screen_enabler_2d_screen_entered() -> void:
 
 
 func _on_hurtbox_body_entered(body: Node2D) -> void:
-	body.velocity = Vector2(50, -300)
-	boss_hp -= 1 
-	player_hit = true 
-	turn_cont = 0 
+	pass
 
 func create_lose_boss():
 	var boss_scene = boss_instance.instantiate()
 	add_sibling(boss_scene)
 	boss_scene.global_position = position
+	
+func take_damage(amount: int) -> void:
+	if is_dead:
+		return
+	boss_hp -= amount
+	if boss_hp <= 0:
+		die()
+func die() -> void:
+	is_dead = true
+	velocity = Vector2.ZERO
+	anime.play("death")
+		
+		
+		
 	

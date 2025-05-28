@@ -2,10 +2,7 @@
 
 [ext_resource type="Script" uid="uid://n6g8sysj56jp" path="res://Assets_npc/cena_npc/npcanciao.gd" id="1_3prmw"]
 [ext_resource type="Texture2D" uid="uid://cij7kkitk5fwe" path="res://Assets_npc/Old_man_idle.png" id="1_efeq5"]
-[ext_resource type="FontFile" uid="uid://c56hf5lax2ym3" path="res://Menu-assets/Font/8-BIT WONDER.TTF" id="3_gf3u0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6x8w"]
-size = Vector2(61, 115)
+[ext_resource type="FontFile" uid="uid://cei47lh1qwluu" path="res://Menu-assets/Font/arial_narrow_7.ttf" id="3_3prmw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y37b4"]
 atlas = ExtResource("1_efeq5")
@@ -43,14 +40,26 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6x8w"]
+size = Vector2(61, 115)
+
 [sub_resource type="LabelSettings" id="LabelSettings_2o2rc"]
-font = ExtResource("3_gf3u0")
-font_size = 12
-outline_size = 2
+font = ExtResource("3_3prmw")
+font_size = 33
+outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
 [node name="npcanciao" type="Node2D"]
 script = ExtResource("1_3prmw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-33, -81)
+scale = Vector2(2.95833, 3.40625)
+sprite_frames = SubResource("SpriteFrames_q0111")
+autoplay = "default"
+frame = 1
+frame_progress = 0.600542
+flip_h = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -58,20 +67,12 @@ script = ExtResource("1_3prmw")
 position = Vector2(-0.5, -57.5)
 shape = SubResource("RectangleShape2D_j6x8w")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(32, -83)
-scale = Vector2(2.95833, 3.40625)
-sprite_frames = SubResource("SpriteFrames_q0111")
-autoplay = "default"
-frame = 1
-frame_progress = 0.600542
-
 [node name="Label" type="Label" parent="."]
-offset_left = -26.0
-offset_top = -135.0
-offset_right = 40.0
-offset_bottom = -123.0
-scale = Vector2(0.749854, 1)
+offset_left = -21.0
+offset_top = -138.0
+offset_right = 66.0
+offset_bottom = -102.0
+scale = Vector2(0.466545, 0.406704)
 text = "anciao"
 label_settings = SubResource("LabelSettings_2o2rc")
 

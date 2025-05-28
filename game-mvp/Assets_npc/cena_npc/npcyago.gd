@@ -1,6 +1,5 @@
 extends Node2D
 
-
 @onready var label: Label = $Label
 @onready var player: Node = null
 @onready var timer: Timer = $Timer
@@ -9,16 +8,14 @@ extends Node2D
 var player_in_area: bool = false
 var dialog_index: int = -1
 var dialog_list: Array[String] = [
-	"MAE",
-	"Filho…", 
-	"toma cuidado.", 
-	"Nem tudo são flores…",
-	"Hoje em dia…", 
-	"as pessoas se preocupam mais", 
-	"com bonecos de bebê reborn…", 
-	"do que com a própria água", 
-	"que nos dá vida.",
-	"Por isso… estamos assim"
+"Olá! Eu sou o Yago… não,",
+"não sou o Goku!",
+"Mas serei seu rival!",
+"Achou que ia passar para a final fácil", 
+"desse jeito, seu fuleiro?",
+"Veio? Então…",
+"pega meu curso… quis dizer… meu Pokémon!"
+	
 ]
 
 var dialog_shown: bool = false  # impede repetir
@@ -39,6 +36,7 @@ func _process(delta):
 			dialog_index = -1
 			dialog_shown = true  # Após o último diálogo, marca como mostrado
 			_pause_player(false)  # Retorna o jogador ao normal
+			get_tree().change_scene_to_file("batalha")
 			
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:

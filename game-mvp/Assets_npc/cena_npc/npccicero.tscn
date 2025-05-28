@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://b00nvdwgw88tn"]
+
+[ext_resource type="Texture2D" uid="uid://d2ygj7x7sndek" path="res://Assets_npc/Imagem_do_WhatsApp_de_2025-05-27_à_s__15.40.55_7abffb60-removebg-preview.png" id="1_8b5m0"]
+[ext_resource type="Script" uid="uid://cs4qtuffe54ii" path="res://Assets_npc/cena_npc/npccicero.gd" id="1_wxcwo"]
+[ext_resource type="FontFile" uid="uid://cei47lh1qwluu" path="res://Menu-assets/Font/arial_narrow_7.ttf" id="3_wxcwo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djsqd"]
+size = Vector2(76.8716, 216.945)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djsqd"]
+atlas = ExtResource("1_8b5m0")
+region = Rect2(166, 0, 166, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xwt1h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djsqd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dh34n"]
+font = ExtResource("3_wxcwo")
+font_size = 31
+outline_size = 10
+outline_color = Color(0.0383972, 0.0383972, 0.0383972, 1)
+
+[node name="npccicero" type="Node2D"]
+script = ExtResource("1_wxcwo")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.539358, -93)
+scale = Vector2(0.976676, 0.84814)
+shape = SubResource("RectangleShape2D_djsqd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.25, -83.75)
+scale = Vector2(0.424699, 0.409)
+sprite_frames = SubResource("SpriteFrames_xwt1h")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -29.0
+offset_top = -212.0
+offset_right = 45.0
+offset_bottom = -176.0
+scale = Vector2(0.783966, 0.658209)
+text = "teste"
+label_settings = SubResource("LabelSettings_dh34n")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
