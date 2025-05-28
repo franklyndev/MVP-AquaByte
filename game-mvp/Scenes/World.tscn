@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dyjw6kt7h0doe" path="res://backs/entrada praia.png" id="5_op4cu"]
 [ext_resource type="Texture2D" uid="uid://diteqc1o3stmn" path="res://backs/entrada-caverna.png" id="6_7yo87"]
 [ext_resource type="Texture2D" uid="uid://c7rudn1txc6e" path="res://Assets_cabana/1_cabana.png" id="6_y8a40"]
-[ext_resource type="Texture2D" uid="uid://b5qqd2m4t7fu7" path="res://Forest Tileset/Tiles/tilemap_new_softy_sand.png" id="7_8l3nt"]
+[ext_resource type="Texture2D" path="res://Forest Tileset/Tiles/tilemap_new_softy_sand.png" id="7_8l3nt"]
 [ext_resource type="Texture2D" uid="uid://7ksxvu1jypr8" path="res://Assets_cabana/3_cabana.png" id="7_n1aqv"]
 [ext_resource type="Texture2D" uid="uid://b068ibyylfpqy" path="res://Assets_cabana/4_cabana.png" id="8_d2jk0"]
 [ext_resource type="Texture2D" uid="uid://ct51js5li0jdy" path="res://Forest Tileset/Tiles/areia melhor.png" id="8_kwl8l"]
