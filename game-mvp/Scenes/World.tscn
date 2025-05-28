@@ -1346,7 +1346,7 @@ position = Vector2(3641, 528)
 scale = Vector2(-1.55738, 5.67492)
 
 [node name="Killzone5" parent="Killzone-espinho" instance=ExtResource("30_y1bqn")]
-position = Vector2(4429, 614)
+position = Vector2(4424, 616)
 scale = Vector2(49.6941, 3.8163)
 
 [node name="Killzone6" parent="Killzone-espinho" instance=ExtResource("30_y1bqn")]
