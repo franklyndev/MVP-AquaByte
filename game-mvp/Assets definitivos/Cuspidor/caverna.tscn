@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bm0lmiarhuvlw"]
+[gd_scene load_steps=32 format=3 uid="uid://bm0lmiarhuvlw"]
 
 [ext_resource type="Texture2D" uid="uid://dhkyl8315nekp" path="res://backs/Caverna.png" id="1_cou8j"]
 [ext_resource type="Script" path="res://Scripts/caverna.gd" id="1_ewbyo"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://c1hmcytxjmcb3" path="res://Assets_npc/cena_npc/npcyago.tscn" id="26_vj2v0"]
 [ext_resource type="AudioStream" uid="uid://27hocs4ej46n" path="res://Sound/Jogo.mp3" id="27_ewbyo"]
 [ext_resource type="PackedScene" uid="uid://b00nvdwgw88tn" path="res://Assets_npc/cena_npc/npccicero.tscn" id="27_r0oq3"]
+[ext_resource type="PackedScene" uid="uid://dpqij5mxd1or6" path="res://Assets definitivos/cuspidor.tscn" id="29_cr5f1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppnfb"]
 texture = ExtResource("2_1f55b")
@@ -895,7 +896,7 @@ rotation_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Player" parent="." instance=ExtResource("20_wj1r8")]
-position = Vector2(10704, 519)
+position = Vector2(5069, 295)
 scale = Vector2(1.2, 1.2)
 
 [node name="turtlecrazy" parent="." instance=ExtResource("22_o4xeb")]
@@ -945,3 +946,24 @@ stream = ExtResource("27_ewbyo")
 volume_db = -22.487
 pitch_scale = 0.71
 autoplay = true
+
+[node name="Cuspidor" parent="." instance=ExtResource("29_cr5f1")]
+position = Vector2(903, 464)
+scale = Vector2(1, 1)
+
+[node name="Cuspidor2" parent="." instance=ExtResource("29_cr5f1")]
+position = Vector2(1079, 496)
+scale = Vector2(1, 1)
+
+[node name="Killzone" parent="." instance=ExtResource("23_aldle")]
+position = Vector2(904, 398)
+
+[node name="Killzone2" parent="." instance=ExtResource("23_aldle")]
+position = Vector2(1079, 431)
+
+[node name="Cuspidor3" parent="." instance=ExtResource("29_cr5f1")]
+position = Vector2(5168, 385)
+scale = Vector2(1, 1)
+
+[node name="Killzone3" parent="." instance=ExtResource("23_aldle")]
+position = Vector2(5169, 315)
