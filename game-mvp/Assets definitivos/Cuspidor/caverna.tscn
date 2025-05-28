@@ -892,7 +892,7 @@ rotation_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Player" parent="." instance=ExtResource("21_1e77l")]
-position = Vector2(22, 323)
+position = Vector2(21, 316)
 scale = Vector2(1.2, 1.2)
 
 [node name="turtlecrazy" parent="." instance=ExtResource("22_2jyjp")]
