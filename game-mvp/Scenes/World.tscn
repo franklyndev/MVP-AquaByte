@@ -1323,9 +1323,6 @@ limit_right = 15202
 limit_bottom = 648
 editor_draw_limits = true
 
-[node name="enemy" parent="." instance=ExtResource("28_g01fq")]
-position = Vector2(3289, 556)
-
 [node name="pause_menu" parent="." instance=ExtResource("30_7dsfl")]
 
 [node name="Killzone-espinho" type="Node" parent="."]
@@ -1433,5 +1430,8 @@ position = Vector2(5944, 576)
 stream = ExtResource("38_d2jk0")
 volume_db = -22.487
 autoplay = true
+
+[node name="enemy8" parent="." instance=ExtResource("28_g01fq")]
+position = Vector2(3175, 576)
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
