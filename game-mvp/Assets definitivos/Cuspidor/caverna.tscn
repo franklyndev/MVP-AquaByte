@@ -1,34 +1,35 @@
-[gd_scene load_steps=29 format=3 uid="uid://bm0lmiarhuvlw"]
+[gd_scene load_steps=30 format=3 uid="uid://bm0lmiarhuvlw"]
 
-[ext_resource type="Texture2D" uid="uid://dhkyl8315nekp" path="res://backs/Caverna.png" id="1_cou8j"]
-[ext_resource type="Texture2D" uid="uid://bsng7h6pjje3s" path="res://Forest Tileset/Tiles/cave tile 2.png" id="2_1f55b"]
-[ext_resource type="Texture2D" uid="uid://bena5enlmpah1" path="res://backs/cavecomlixo.png" id="2_qyhf2"]
-[ext_resource type="Texture2D" uid="uid://j3aubvft8dmx" path="res://Assets definitivos/liveixa vermelha.png" id="4_48k20"]
-[ext_resource type="Texture2D" uid="uid://6ltd53py07ka" path="res://Assets definitivos/lixeira amarela.png" id="6_f5ab5"]
-[ext_resource type="Texture2D" uid="uid://dvl18r1ij7x3p" path="res://Assets definitivos/Lixeira azul.png" id="7_vsia7"]
-[ext_resource type="Texture2D" uid="uid://dpxe8pf3ymdu1" path="res://Assets definitivos/Lixeira Verde.png" id="8_hdjuu"]
-[ext_resource type="Texture2D" uid="uid://covq8j0fhxsxg" path="res://Assets definitivos/Lixeira de aço com lixo.png" id="9_16081"]
-[ext_resource type="Texture2D" uid="uid://dhfcqtqieg8uh" path="res://Assets definitivos/Espinho de Pedra.png" id="9_pgug5"]
-[ext_resource type="Texture2D" uid="uid://kfoluwjldn50" path="res://Assets definitivos/Lixo aberto.png" id="10_mdqit"]
-[ext_resource type="Texture2D" uid="uid://bw2nk4y68t2n6" path="res://Assets definitivos/Saco de lixo.png" id="11_wj1r8"]
-[ext_resource type="Texture2D" uid="uid://0dp71i0gn23" path="res://Assets definitivos/Camisa vermelha.png" id="12_o4xeb"]
-[ext_resource type="Texture2D" uid="uid://clwwyifubsguh" path="res://Assets feitos por Franklyn/camisa azul rasgada.png" id="13_aldle"]
-[ext_resource type="Texture2D" uid="uid://dftylmkv3yuie" path="res://Assets definitivos/espinhos de pedra dimensaopequena.png" id="14_f8f2v"]
-[ext_resource type="Texture2D" uid="uid://cfolr6m8rtodv" path="res://Assets feitos por Franklyn/camisa roxo rasgada.png" id="15_70cbk"]
-[ext_resource type="Texture2D" uid="uid://dlebukiut3ib4" path="res://Assets feitos por Franklyn/lata de refri.png" id="16_vj2v0"]
-[ext_resource type="Texture2D" uid="uid://ch4n6n518mytg" path="res://Assets feitos por Franklyn/saco de lixo aberto 2.png" id="17_r0oq3"]
-[ext_resource type="Texture2D" uid="uid://bejvfmroah5g3" path="res://Assets feitos por Franklyn/Lixeira de aço com lixo 128.png" id="18_ewbyo"]
-[ext_resource type="Texture2D" uid="uid://b33oikh7riyjb" path="res://Assets feitos por Franklyn/Saco de lixo fechado pequeno.png" id="19_bmyxb"]
-[ext_resource type="PackedScene" uid="uid://bcc3eb2ps3a48" path="res://Scenes/player.tscn" id="20_wj1r8"]
-[ext_resource type="PackedScene" uid="uid://wj1buw7nkdqs" path="res://enitdade/camera.tscn" id="21_o4xeb"]
-[ext_resource type="PackedScene" uid="uid://sowrxy6o30ua" path="res://boss (2)/scene/turtlecrazy.tscn" id="22_o4xeb"]
-[ext_resource type="PackedScene" uid="uid://bht8yit5qrt4f" path="res://zona-dano/killzone.tscn" id="23_aldle"]
-[ext_resource type="PackedScene" uid="uid://dlkvb8ou28vp3" path="res://Scenes/enemy.tscn" id="24_f8f2v"]
-[ext_resource type="PackedScene" uid="uid://c1hmcytxjmcb3" path="res://Assets_npc/cena_npc/npcyago.tscn" id="26_vj2v0"]
-[ext_resource type="PackedScene" uid="uid://b00nvdwgw88tn" path="res://Assets_npc/cena_npc/npccicero.tscn" id="27_r0oq3"]
+[ext_resource type="Texture2D" uid="uid://dhkyl8315nekp" path="res://backs/Caverna.png" id="1_itsox"]
+[ext_resource type="Texture2D" uid="uid://bena5enlmpah1" path="res://backs/cavecomlixo.png" id="2_43rym"]
+[ext_resource type="Texture2D" uid="uid://bsng7h6pjje3s" path="res://Forest Tileset/Tiles/cave tile 2.png" id="3_cr5f1"]
+[ext_resource type="Texture2D" uid="uid://j3aubvft8dmx" path="res://Assets definitivos/liveixa vermelha.png" id="4_r02gg"]
+[ext_resource type="Texture2D" uid="uid://6ltd53py07ka" path="res://Assets definitivos/lixeira amarela.png" id="5_ehuy4"]
+[ext_resource type="Texture2D" uid="uid://dvl18r1ij7x3p" path="res://Assets definitivos/Lixeira azul.png" id="6_001rg"]
+[ext_resource type="Texture2D" uid="uid://dpxe8pf3ymdu1" path="res://Assets definitivos/Lixeira Verde.png" id="7_3sqnm"]
+[ext_resource type="Texture2D" uid="uid://dhfcqtqieg8uh" path="res://Assets definitivos/Espinho de Pedra.png" id="8_82xlb"]
+[ext_resource type="Texture2D" uid="uid://covq8j0fhxsxg" path="res://Assets definitivos/Lixeira de aço com lixo.png" id="9_dyllv"]
+[ext_resource type="Texture2D" uid="uid://kfoluwjldn50" path="res://Assets definitivos/Lixo aberto.png" id="10_r7knp"]
+[ext_resource type="Texture2D" uid="uid://bw2nk4y68t2n6" path="res://Assets definitivos/Saco de lixo.png" id="11_53xbs"]
+[ext_resource type="Texture2D" uid="uid://0dp71i0gn23" path="res://Assets definitivos/Camisa vermelha.png" id="12_nftcp"]
+[ext_resource type="Texture2D" uid="uid://clwwyifubsguh" path="res://Assets feitos por Franklyn/camisa azul rasgada.png" id="13_0a30d"]
+[ext_resource type="Texture2D" uid="uid://dftylmkv3yuie" path="res://Assets definitivos/espinhos de pedra dimensaopequena.png" id="14_mcu5o"]
+[ext_resource type="Texture2D" uid="uid://cfolr6m8rtodv" path="res://Assets feitos por Franklyn/camisa roxo rasgada.png" id="15_81xiy"]
+[ext_resource type="Texture2D" uid="uid://dlebukiut3ib4" path="res://Assets feitos por Franklyn/lata de refri.png" id="16_2suod"]
+[ext_resource type="Texture2D" uid="uid://ch4n6n518mytg" path="res://Assets feitos por Franklyn/saco de lixo aberto 2.png" id="17_dh3yd"]
+[ext_resource type="Texture2D" uid="uid://bejvfmroah5g3" path="res://Assets feitos por Franklyn/Lixeira de aço com lixo 128.png" id="18_5fdof"]
+[ext_resource type="Texture2D" uid="uid://b33oikh7riyjb" path="res://Assets feitos por Franklyn/Saco de lixo fechado pequeno.png" id="19_ivwlt"]
+[ext_resource type="PackedScene" uid="uid://wj1buw7nkdqs" path="res://enitdade/camera.tscn" id="20_q4n6i"]
+[ext_resource type="PackedScene" uid="uid://bcc3eb2ps3a48" path="res://Scenes/player.tscn" id="21_1e77l"]
+[ext_resource type="PackedScene" uid="uid://sowrxy6o30ua" path="res://boss (2)/scene/turtlecrazy.tscn" id="22_2jyjp"]
+[ext_resource type="PackedScene" uid="uid://bht8yit5qrt4f" path="res://zona-dano/killzone.tscn" id="23_0u5a0"]
+[ext_resource type="PackedScene" uid="uid://dlkvb8ou28vp3" path="res://Scenes/enemy.tscn" id="24_phcwv"]
+[ext_resource type="PackedScene" uid="uid://c1hmcytxjmcb3" path="res://Assets_npc/cena_npc/npcyago.tscn" id="25_166lh"]
+[ext_resource type="PackedScene" uid="uid://b00nvdwgw88tn" path="res://Assets_npc/cena_npc/npccicero.tscn" id="26_t3fki"]
+[ext_resource type="PackedScene" uid="uid://dpqij5mxd1or6" path="res://Assets definitivos/cuspidor.tscn" id="27_rme2m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppnfb"]
-texture = ExtResource("2_1f55b")
+texture = ExtResource("3_cr5f1")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -728,7 +729,7 @@ sources/3 = SubResource("TileSetAtlasSource_ppnfb")
 offset_right = 10232.0
 offset_bottom = 1152.0
 scale = Vector2(0.562477, 0.5625)
-texture = ExtResource("1_cou8j")
+texture = ExtResource("1_itsox")
 stretch_mode = 1
 
 [node name="Cave-lixada" type="TextureRect" parent="."]
@@ -736,7 +737,7 @@ offset_left = 5755.0
 offset_right = 16375.0
 offset_bottom = 1152.0
 scale = Vector2(0.5625, 0.5625)
-texture = ExtResource("2_qyhf2")
+texture = ExtResource("2_43rym")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -748,57 +749,57 @@ layer_1/name = "Layer1"
 [node name="LiveixaVermelha" type="Sprite2D" parent="."]
 position = Vector2(144, 289)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("4_48k20")
+texture = ExtResource("4_r02gg")
 
 [node name="LixeiraAmarela" type="Sprite2D" parent="."]
 position = Vector2(197, 287)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("6_f5ab5")
+texture = ExtResource("5_ehuy4")
 
 [node name="LixeiraAzul" type="Sprite2D" parent="."]
 position = Vector2(247, 289)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("7_vsia7")
+texture = ExtResource("6_001rg")
 
 [node name="LixeiraVerde" type="Sprite2D" parent="."]
 position = Vector2(299, 289)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("8_hdjuu")
+texture = ExtResource("7_3sqnm")
 
 [node name="EspinhoDePedra" type="Sprite2D" parent="."]
 position = Vector2(666, 163)
 rotation = -3.14159
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("9_pgug5")
+texture = ExtResource("8_82xlb")
 
 [node name="LixeiraDeAçoComLixo" type="Sprite2D" parent="."]
 position = Vector2(807, 354)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("9_16081")
+texture = ExtResource("9_dyllv")
 
 [node name="LixoAberto" type="Sprite2D" parent="."]
 position = Vector2(1031, 400)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("10_mdqit")
+texture = ExtResource("10_r7knp")
 
 [node name="SacoDeLixo" type="Sprite2D" parent="."]
 position = Vector2(1395, 530)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("11_wj1r8")
+texture = ExtResource("11_53xbs")
 
 [node name="SacoDeLixo2" type="Sprite2D" parent="."]
 position = Vector2(1410, 533)
 scale = Vector2(1.9595, 1.9795)
-texture = ExtResource("11_wj1r8")
+texture = ExtResource("11_53xbs")
 
 [node name="CamisaVermelha" type="Sprite2D" parent="."]
 position = Vector2(1442, 557)
-texture = ExtResource("12_o4xeb")
+texture = ExtResource("12_nftcp")
 
 [node name="CamisaAzulRasgada" type="Sprite2D" parent="."]
 position = Vector2(1375, 573)
 rotation = -3.38594
-texture = ExtResource("13_aldle")
+texture = ExtResource("13_0a30d")
 
 [node name="EspinhosDePedraDimensaopequena" type="TextureRect" parent="."]
 offset_left = 2131.0
@@ -806,18 +807,18 @@ offset_top = 498.0
 offset_right = 2943.0
 offset_bottom = 542.0
 scale = Vector2(1.72917, 1.67614)
-texture = ExtResource("14_f8f2v")
+texture = ExtResource("14_mcu5o")
 stretch_mode = 1
 
 [node name="EspinhosDePedraDimensaopequena2" type="Sprite2D" parent="."]
 position = Vector2(4560, 312)
 scale = Vector2(2.79167, 2.52273)
-texture = ExtResource("14_f8f2v")
+texture = ExtResource("14_mcu5o")
 
 [node name="EspinhosDePedraDimensaopequena3" type="Sprite2D" parent="."]
 position = Vector2(4880, 308)
 scale = Vector2(2.792, 2.792)
-texture = ExtResource("14_f8f2v")
+texture = ExtResource("14_mcu5o")
 
 [node name="EspinhosDePedraDimensaopequena4" type="TextureRect" parent="."]
 offset_left = 5141.0
@@ -825,64 +826,64 @@ offset_top = 508.0
 offset_right = 5347.0
 offset_bottom = 552.0
 scale = Vector2(1.37498, 1.42045)
-texture = ExtResource("14_f8f2v")
+texture = ExtResource("14_mcu5o")
 stretch_mode = 1
 
 [node name="CamisaVermelha2" type="Sprite2D" parent="."]
 position = Vector2(2289, 414)
 scale = Vector2(1.38, 1.14)
-texture = ExtResource("12_o4xeb")
+texture = ExtResource("12_nftcp")
 
 [node name="CamisaVermelha3" type="Sprite2D" parent="."]
 position = Vector2(2365, 510)
 rotation = 2.13803
-texture = ExtResource("12_o4xeb")
+texture = ExtResource("12_nftcp")
 
 [node name="LixoAberto2" type="Sprite2D" parent="."]
 position = Vector2(2612, 336)
 scale = Vector2(2.119, 2.248)
-texture = ExtResource("10_mdqit")
+texture = ExtResource("10_r7knp")
 
 [node name="SacoDeLixo3" type="Sprite2D" parent="."]
 position = Vector2(2595, 322)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("11_wj1r8")
+texture = ExtResource("11_53xbs")
 
 [node name="CamisaRoxoRasgada" type="Sprite2D" parent="."]
 position = Vector2(2664, 496)
 scale = Vector2(1.32031, 1.39844)
-texture = ExtResource("15_70cbk")
+texture = ExtResource("15_81xiy")
 
 [node name="CamisaAzulRasgada2" type="Sprite2D" parent="."]
 position = Vector2(2791, 340)
-texture = ExtResource("13_aldle")
+texture = ExtResource("13_0a30d")
 
 [node name="CamisaAzulRasgada3" type="Sprite2D" parent="."]
 position = Vector2(2721, 362)
 rotation = -3.71755
-texture = ExtResource("13_aldle")
+texture = ExtResource("13_0a30d")
 
 [node name="LataDeRefri" type="Sprite2D" parent="."]
 position = Vector2(3318, 398)
 scale = Vector2(1.94531, 1.92969)
-texture = ExtResource("16_vj2v0")
+texture = ExtResource("16_2suod")
 
 [node name="SacoDeLixoAberto2" type="Sprite2D" parent="."]
 position = Vector2(3466, 455)
 scale = Vector2(1.67669, 1.85637)
-texture = ExtResource("17_r0oq3")
+texture = ExtResource("17_dh3yd")
 
 [node name="LixeiraDeAçoComLixo128" type="Sprite2D" parent="."]
 position = Vector2(4140, 530)
 scale = Vector2(2.119, 2.119)
-texture = ExtResource("18_ewbyo")
+texture = ExtResource("18_5fdof")
 
 [node name="SacoDeLixoFechadoPequeno" type="Sprite2D" parent="."]
 position = Vector2(3118, 319)
 scale = Vector2(2.119, 2.07)
-texture = ExtResource("19_bmyxb")
+texture = ExtResource("19_ivwlt")
 
-[node name="camera" parent="." instance=ExtResource("21_o4xeb")]
+[node name="camera" parent="." instance=ExtResource("20_q4n6i")]
 position = Vector2(457, 191)
 scale = Vector2(1.2, 1.2)
 zoom = Vector2(2, 2)
@@ -890,46 +891,60 @@ limit_bottom = 700
 rotation_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="Player" parent="." instance=ExtResource("20_wj1r8")]
+[node name="Player" parent="." instance=ExtResource("21_1e77l")]
 position = Vector2(22, 323)
 scale = Vector2(1.2, 1.2)
 
-[node name="turtlecrazy" parent="." instance=ExtResource("22_o4xeb")]
+[node name="turtlecrazy" parent="." instance=ExtResource("22_2jyjp")]
 position = Vector2(10738, 465)
 scale = Vector2(3, 3)
 
 [node name="killzone" type="Node" parent="."]
 
-[node name="Killzone" parent="killzone" instance=ExtResource("23_aldle")]
+[node name="Killzone" parent="killzone" instance=ExtResource("23_0u5a0")]
 position = Vector2(664, 153)
 scale = Vector2(1, 4.27408)
 
-[node name="Killzone2" parent="killzone" instance=ExtResource("23_aldle")]
+[node name="Killzone2" parent="killzone" instance=ExtResource("23_0u5a0")]
 position = Vector2(2834, 535)
 scale = Vector2(69.7139, 3.62227)
 
-[node name="Killzone3" parent="killzone" instance=ExtResource("23_aldle")]
+[node name="Killzone3" parent="killzone" instance=ExtResource("23_0u5a0")]
 position = Vector2(4560, 321)
 scale = Vector2(0.714046, 4.71249)
 
-[node name="Killzone4" parent="killzone" instance=ExtResource("23_aldle")]
+[node name="Killzone4" parent="killzone" instance=ExtResource("23_0u5a0")]
 position = Vector2(4880, 317)
 scale = Vector2(-0.475063, 5.03903)
 
-[node name="Killzone5" parent="killzone" instance=ExtResource("23_aldle")]
+[node name="Killzone5" parent="killzone" instance=ExtResource("23_0u5a0")]
 position = Vector2(5276, 539)
 scale = Vector2(-14.7008, 2.00912)
 
-[node name="enemy" parent="." instance=ExtResource("24_f8f2v")]
+[node name="enemy" parent="." instance=ExtResource("24_phcwv")]
 position = Vector2(1498, 550)
 
-[node name="enemy2" parent="." instance=ExtResource("24_f8f2v")]
+[node name="enemy2" parent="." instance=ExtResource("24_phcwv")]
 position = Vector2(3754, 560)
 
-[node name="npcyago" parent="." instance=ExtResource("26_vj2v0")]
+[node name="npcyago" parent="." instance=ExtResource("25_166lh")]
 position = Vector2(6646, 562)
 scale = Vector2(0.382166, 0.376644)
 
-[node name="npccicero" parent="." instance=ExtResource("27_r0oq3")]
+[node name="npccicero" parent="." instance=ExtResource("26_t3fki")]
 position = Vector2(9693, 563)
 scale = Vector2(0.504356, 0.515745)
+
+[node name="Cuspidor" parent="." instance=ExtResource("27_rme2m")]
+position = Vector2(902, 463)
+scale = Vector2(1, 1)
+
+[node name="Cuspidor2" parent="." instance=ExtResource("27_rme2m")]
+position = Vector2(1079, 494)
+scale = Vector2(1, 1)
+
+[node name="Killzone" parent="." instance=ExtResource("23_0u5a0")]
+position = Vector2(903, 395)
+
+[node name="Killzone2" parent="." instance=ExtResource("23_0u5a0")]
+position = Vector2(1081, 428)
