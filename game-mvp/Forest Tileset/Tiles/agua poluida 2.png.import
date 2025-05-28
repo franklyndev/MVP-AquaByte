@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6i4w6qnofqpi"
-path="res://.godot/imported/tileset 2.0.png-b9018183e6d36b731a5d244143211ceb.ctex"
+uid="uid://c0rdraskyfdom"
+path="res://.godot/imported/agua poluida 2.png-78737f0492bcbf52b5b540ba9682c91b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Forest Tileset/Tiles/tileset 2.0.png"
-dest_files=["res://.godot/imported/tileset 2.0.png-b9018183e6d36b731a5d244143211ceb.ctex"]
+source_file="res://Forest Tileset/Tiles/agua poluida 2.png"
+dest_files=["res://.godot/imported/agua poluida 2.png-78737f0492bcbf52b5b540ba9682c91b.ctex"]
 
 [params]
 
