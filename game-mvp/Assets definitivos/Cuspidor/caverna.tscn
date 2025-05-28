@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://bm0lmiarhuvlw"]
 
 [ext_resource type="Texture2D" uid="uid://dhkyl8315nekp" path="res://backs/Caverna.png" id="1_cou8j"]
-[ext_resource type="Script" uid="uid://niikfpsq0dwm" path="res://Scripts/caverna.gd" id="1_ewbyo"]
+[ext_resource type="Script" path="res://Scripts/caverna.gd" id="1_ewbyo"]
 [ext_resource type="Texture2D" uid="uid://bsng7h6pjje3s" path="res://Forest Tileset/Tiles/cave tile 2.png" id="2_1f55b"]
 [ext_resource type="Texture2D" uid="uid://bena5enlmpah1" path="res://backs/cavecomlixo.png" id="2_qyhf2"]
 [ext_resource type="Texture2D" uid="uid://j3aubvft8dmx" path="res://Assets definitivos/liveixa vermelha.png" id="4_48k20"]
@@ -895,7 +895,7 @@ rotation_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Player" parent="." instance=ExtResource("20_wj1r8")]
-position = Vector2(6487, 545)
+position = Vector2(35, 314)
 scale = Vector2(1.2, 1.2)
 
 [node name="turtlecrazy" parent="." instance=ExtResource("22_o4xeb")]
